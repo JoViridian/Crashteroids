@@ -11,7 +11,7 @@ public class MyPlayerDestructionHandler : MonoBehaviour
 
     public void DestroyResult()
     {
-            GameManager.finalScore = GameManager.Instance.score;
-            GameManager.playerState = false;
+            GameManagerAltered.finalScore = GameManagerAltered.Instance.score;
+            GameManagerAltered.playerState = false;
     }
 }

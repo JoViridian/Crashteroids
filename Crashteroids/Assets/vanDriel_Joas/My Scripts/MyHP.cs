@@ -4,6 +4,7 @@ using UnityEngine.Events;
 public class MyHP : MonoBehaviour
 {
     public int hp;
+    public int hpMax = 100;
     public float invincibility;
     private float invincibilityCountdown;
     private int hitTotal;
@@ -39,7 +40,7 @@ public class MyHP : MonoBehaviour
         if (LayerHelper.IsInLayerMask(collision.gameObject, hitMask) && invincibilityCountdown < 0)
         {
             // checks to see how much damage ought to be taken based on the collision and then deals it
-            hitTotal = collision.gameObject.GetComponent<DamagePower>().DoDamage(gameObject);
+            hitTotal = collision.gameObject.GetComponent<MyDamagePower>().DoDamage(gameObject);
             hp -= hitTotal;
 
             invincibilityCountdown = invincibility;

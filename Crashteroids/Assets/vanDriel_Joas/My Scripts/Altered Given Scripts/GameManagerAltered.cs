@@ -3,11 +3,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GameManagerAltered : MonoBehaviour
 {
     // GM's singleton for easy access throughout the whole project
-    private static GameManager instance;
-    public static GameManager Instance { get { return instance; } }
+    private static GameManagerAltered instance;
+    public static GameManagerAltered Instance { get { return instance; } }
 
     public List<GameObject> asteroidTotal = new List<GameObject>();
     public TextMeshProUGUI scoreTextBox;
@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public AudioClip gameEndClip;
     public HighscoreScript script;
 
+    // static is not neccesary here, but too lazy to change formatting in all other scripts
     public int score;
     public static int finalScore;
     public static float gameOverDelay;
@@ -60,7 +61,7 @@ public class GameManager : MonoBehaviour
             asteroidSpeed = maxSpeed;
         }
 
-        if (playerState == true)
+        if (playerState)
         {
             hpTextBox.text = "HP: " + player.GetComponent<MyHP>().hp.ToString() + "%";
             scoreTextBox.text = score.ToString();

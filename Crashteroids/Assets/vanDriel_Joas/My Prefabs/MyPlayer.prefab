@@ -146,9 +146,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 2992537867741629695, guid: e16410d1fd3cf6b468ff265ff6707c4a, type: 3}
   bulletPrefabBig: {fileID: 1298331298915732755, guid: 54c71f7632f03134584a73bef88195da, type: 3}
-  bulletSound1: {fileID: 8300000, guid: e16aa4d2685d8744c9c6d17747b89329, type: 3}
-  bulletSound2: {fileID: 8300000, guid: 5e2e2c2d9c374714e8dea4bd065e6d6a, type: 3}
-  bulletSound3: {fileID: 8300000, guid: 8fe7a0dd1598dc441a04002539c3995d, type: 3}
+  simpleBullet: {fileID: 8300000, guid: 8fe7a0dd1598dc441a04002539c3995d, type: 3}
+  randomBulletSound:
+  - {fileID: 8300000, guid: e16aa4d2685d8744c9c6d17747b89329, type: 3}
+  - {fileID: 8300000, guid: 5e2e2c2d9c374714e8dea4bd065e6d6a, type: 3}
+  cooldownEffect: {fileID: 4516069547747178362}
   deployDistance: {x: 0, y: 0, z: 0}
   bulletSpeed: 300
   bulletOffset: 60

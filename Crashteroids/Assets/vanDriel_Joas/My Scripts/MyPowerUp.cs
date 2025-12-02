@@ -3,17 +3,18 @@ using UnityEngine;
 public class MyPowerUp : MonoBehaviour
 {
     public AudioClip pickupSound;
+    public int value = 10;
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (collision.gameObject.GetComponent<MyHP>().hp < 100)
+            if (collision.gameObject.GetComponent<MyHP>().hp < collision.gameObject.GetComponent<MyHP>().hpMax)
             {
                 collision.gameObject.GetComponent<MyHP>().hp++;
             }
 
-            GameManager.Instance.score += 10;
+            GameManagerAltered.Instance.score += value;
             AudioManager.Instance.PlayClip(pickupSound);
             Destroy(gameObject);
         }

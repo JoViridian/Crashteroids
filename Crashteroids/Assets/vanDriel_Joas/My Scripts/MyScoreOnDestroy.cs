@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class MyScoreOnDestroy : MonoBehaviour
 {
-    public GameObject player;
+    public MyHP MyHP;
     public int pointWorth = 0;
 
     public void DoScore()
     { 
         //only allows score to increase if player still alive
-        if (player.GetComponent<MyHP>().hp >= 1)
+        if (MyHP.hp >= 1)
         {
-            GameManager.Instance.score += pointWorth;
+            GameManagerAltered.Instance.score += pointWorth;
         }
     }
 }

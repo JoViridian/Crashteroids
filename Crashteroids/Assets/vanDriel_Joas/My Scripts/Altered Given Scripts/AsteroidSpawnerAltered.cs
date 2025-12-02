@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AsteroidSpawner : MonoBehaviour
+public class AsteroidSpawnerAltered : MonoBehaviour
 {
     public GameObject asteroidPrefab;
     public float padding = 0.1f;
@@ -14,6 +14,7 @@ public class AsteroidSpawner : MonoBehaviour
     private float maxIncreaseTimer;
     public float maxIncreaseTimerReset = 30;
     public float maxAsteroidListSize = 5;
+    private float timerPlus = 2;
 
     void Start()
     {
@@ -25,7 +26,7 @@ public class AsteroidSpawner : MonoBehaviour
     {
         // ! changed how timer works to not countdown whilst the maxAsteroidTotal has been reached
         // ! purposely kept the asteroidTotal list to only big asteroids
-        if (GameManager.Instance.asteroidTotal.Count <= maxAsteroidTotal - 1)
+        if (GameManagerAltered.Instance.asteroidTotal.Count <= maxAsteroidTotal - 1)
         {
             DoTimer();
         }
@@ -35,7 +36,7 @@ public class AsteroidSpawner : MonoBehaviour
         if (maxIncreaseTimer < 0 && maxAsteroidTotal < maxAsteroidListSize)
         {
             maxAsteroidTotal++;
-            maxIncreaseTimer = maxIncreaseTimerReset * 2;
+            maxIncreaseTimer = maxIncreaseTimerReset * timerPlus;
             minSpawnTime = minSpawnTimeUpdate;
             maxSpawnTime = maxSpawnTimeUpdate;
         }
@@ -62,7 +63,7 @@ public class AsteroidSpawner : MonoBehaviour
     {
         // instantiate new GO from prefab on position off screen
         GameObject asteroidInstance = Instantiate(asteroidPrefab, GetRandomPositionOffScreen(), Quaternion.identity, transform);
-        GameManager.Instance.asteroidTotal.Add(asteroidInstance);
+        GameManagerAltered.Instance.asteroidTotal.Add(asteroidInstance);
     }
 
     private void ResetTimer()

@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameOverMenu : MonoBehaviour
+public class GameOverMenuAltered : MonoBehaviour
 {
     public string levelName;
     public TextMeshProUGUI finalScoreTextBox;
@@ -12,10 +12,10 @@ public class GameOverMenu : MonoBehaviour
 
     private void Start()
     {
-        finalScoreTextBox.text = "FINAL SCORE:" + GameManager.finalScore.ToString();
+        finalScoreTextBox.text = "FINAL SCORE:" + GameManagerAltered.finalScore.ToString();
 
         // repurposes the scene into the start screen if the normal scene has not been loaded yet this play session
-        if (GameManager.gameStart == true)
+        if (GameManagerAltered.gameStart == true)
         {
             DoScoreUpdate();
             titleTextBox.text = "GAME OVER";
@@ -45,14 +45,14 @@ public class GameOverMenu : MonoBehaviour
     private void DoScoreUpdate()
     {
         // updates the highscore and allows it to be called in a future play session
-        if (GameManager.highscoreGet == true)
+        if (GameManagerAltered.highscoreGet)
         {
-            finalScoreTextBox.text = "FINAL SCORE:" + GameManager.finalScore.ToString() + "\n \n NEW HIGH SCORE:" + script.highscore.ToString();
+            finalScoreTextBox.text = "FINAL SCORE:" + GameManagerAltered.finalScore.ToString() + "\n \n NEW HIGH SCORE:" + script.highscore.ToString();
             PlayerPrefs.SetInt("Highscore", script.highscore);
         }
         else
         {
-            finalScoreTextBox.text = "FINAL SCORE:" + GameManager.finalScore.ToString() + "\n \n HIGH SCORE:" + script.highscore.ToString();
+            finalScoreTextBox.text = "FINAL SCORE:" + GameManagerAltered.finalScore.ToString() + "\n \n HIGH SCORE:" + script.highscore.ToString();
         }
     }
 }
