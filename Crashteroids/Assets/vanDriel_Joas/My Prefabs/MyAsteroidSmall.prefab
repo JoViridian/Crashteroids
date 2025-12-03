@@ -135,7 +135,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6689194817083154363}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 9fb841bf01b40214db20b1253635e242, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -216,6 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
+  hpMax: 100
   invincibility: 0.1
   hitMask:
     serializedVersion: 2
@@ -263,7 +264,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09e78d186cd9c7e44b8ad994b3a47c28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1942460987253603177, guid: a2d650c4a99f3934e87d3edb98744f24, type: 3}
   MyHP: {fileID: 5272654178804140462, guid: a2d650c4a99f3934e87d3edb98744f24, type: 3}
   pointWorth: 50
 --- !u!114 &7050193767575096018
@@ -280,6 +280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   complexDamage: 1
   damagePower: 1
+  defenseTotal: 1
 --- !u!114 &1999113491765915057
 MonoBehaviour:
   m_ObjectHideFlags: 0

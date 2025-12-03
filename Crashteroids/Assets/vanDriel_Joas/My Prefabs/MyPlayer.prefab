@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 5272654178804140462}
   - component: {fileID: 4011868647533632111}
   - component: {fileID: 5061687849970511563}
+  - component: {fileID: 1018265261263250365}
   m_Layer: 6
   m_Name: MyPlayer
   m_TagString: Player
@@ -49,7 +50,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942460987253603177}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 9fb841bf01b40214db20b1253635e242, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -72,8 +73,8 @@ Rigidbody:
   m_GameObject: {fileID: 1942460987253603177}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0.1
-  m_AngularDrag: 1
+  m_Drag: 0.01
+  m_AngularDrag: 0.5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -169,6 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 100
+  hpMax: 100
   invincibility: 0.3
   hitMask:
     serializedVersion: 2
@@ -219,6 +221,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   complexDamage: 1
   damagePower: 2
+  defenseTotal: 1
+--- !u!114 &1018265261263250365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942460987253603177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72fec1a2686169e469a9f592347cdef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: {fileID: 5061687849970511563}
+  armorCutoff: 0.2
 --- !u!1 &5344330666262172712
 GameObject:
   m_ObjectHideFlags: 0

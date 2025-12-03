@@ -71,6 +71,9 @@ public class MyGun : MonoBehaviour
         AudioManager.Instance.PlayClip(simpleBullet);
 
         // gives the player recoil
-        gameObject.GetComponent<Rigidbody>().AddRelativeForce(0, 0, -pushBack);
+        Rigidbody rb = gameObject.GetComponent<Rigidbody>();
+        rb.linearVelocity *= 0.25f;
+        rb.angularVelocity *= 0.25f;
+        rb.AddRelativeForce(0, 0, -pushBack);
     }
 }

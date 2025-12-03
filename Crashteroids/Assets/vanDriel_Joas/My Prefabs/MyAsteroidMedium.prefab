@@ -150,7 +150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7050193767575096018, guid: 3148a2083944696448386a0dd2f3a2f1, type: 3}
       propertyPath: damagePower
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7442458116112690153, guid: 3148a2083944696448386a0dd2f3a2f1, type: 3}
       propertyPath: m_Color.b
