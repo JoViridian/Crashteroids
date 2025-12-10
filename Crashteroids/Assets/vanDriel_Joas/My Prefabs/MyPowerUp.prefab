@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 6781224896450323480}
   - component: {fileID: 4287650304230954076}
   - component: {fileID: 6214260473279568984}
+  - component: {fileID: -1951664812731719442}
   m_Layer: 9
   m_Name: MyPowerUp
   m_TagString: Asteroid
@@ -183,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09e78d186cd9c7e44b8ad994b3a47c28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1942460987253603177, guid: a2d650c4a99f3934e87d3edb98744f24, type: 3}
+  MyHP: {fileID: 0}
   pointWorth: 10
 --- !u!114 &6214260473279568984
 MonoBehaviour:
@@ -198,3 +199,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupSound: {fileID: 8300000, guid: ab5bc8f34a2f6da4faa96b71817631db, type: 3}
+  value: 10
+--- !u!114 &-1951664812731719442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5937090628233681240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f14014c8b7424cc4f8939c686117516b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sphereBuffer: {fileID: 5228968186692392925}

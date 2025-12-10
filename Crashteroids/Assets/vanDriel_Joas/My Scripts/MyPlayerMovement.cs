@@ -29,5 +29,6 @@ public class MyPlayerMovement : MonoBehaviour
             animator.SetBool("Thrusting", false);
         }
 
+        GameManagerAltered.playerPosition = transform.position;
     }
 }
