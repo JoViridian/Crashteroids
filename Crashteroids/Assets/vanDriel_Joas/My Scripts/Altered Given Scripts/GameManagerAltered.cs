@@ -23,7 +23,6 @@ public class GameManagerAltered : MonoBehaviour
     public static bool playerState;
     public static bool gameStart;
     public static bool highscoreGet;
-    public static Vector3 playerPosition;
 
     public float asteroidSpeed;
     private int difficultyScoreCap = 20000;
