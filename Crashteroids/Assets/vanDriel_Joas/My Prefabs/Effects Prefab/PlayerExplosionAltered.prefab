@@ -20,6 +20,22 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3134375265776910035, guid: 6f388f3fee1c133459bead65c328810f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2025778975, guid: 2ed516e271fe4d547b66a3656b7fcf6c, type: 3}
+    - target: {fileID: 3134375265776910035, guid: 6f388f3fee1c133459bead65c328810f, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134375265776910035, guid: 6f388f3fee1c133459bead65c328810f, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -196340983
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018497183280277169, guid: 6f388f3fee1c133459bead65c328810f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a0473f8ec5222374ba9ba84061067cbf, type: 2}
     - target: {fileID: 6371256490857905853, guid: 6f388f3fee1c133459bead65c328810f, type: 3}
       propertyPath: m_Name
       value: PlayerExplosionAltered

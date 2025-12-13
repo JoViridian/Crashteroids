@@ -45,10 +45,10 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2992537867741629695}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -139,6 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   complexDamage: 0
   damagePower: 1
+  defenseTotal: 1
 --- !u!1 &6888747993672653468
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,7 +166,7 @@ Transform:
   m_GameObject: {fileID: 6888747993672653468}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -191,6 +192,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -212,10 +215,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -196340983
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: -1538184801
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1111182918, guid: c104f32e749e1ed4082d397e2e0e2734, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 832f02ea858c31f49803d2c56db69b85, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

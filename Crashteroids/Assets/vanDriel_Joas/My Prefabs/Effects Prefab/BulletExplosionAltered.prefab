@@ -53,6 +53,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -74,10 +76,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -196340983
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 10
-  m_Sprite: {fileID: 487277433, guid: f58cc24c05f8dd74392336c65b564351, type: 3}
+  m_Sprite: {fileID: 2025778975, guid: 2ed516e271fe4d547b66a3656b7fcf6c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,7 +101,7 @@ Animator:
   m_GameObject: {fileID: 5259028704050467978}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9e1fd086bec362e41a8387c77f66004a, type: 2}
+  m_Controller: {fileID: 9100000, guid: a0473f8ec5222374ba9ba84061067cbf, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
