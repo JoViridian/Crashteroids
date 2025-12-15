@@ -12,13 +12,14 @@ GameObject:
   - component: {fileID: 6998222271887524906}
   - component: {fileID: 5864120440882639698}
   - component: {fileID: 93670315250929924}
-  - component: {fileID: 3377843199504292780}
   - component: {fileID: 7194583555967069841}
+  - component: {fileID: 3377843199504292780}
   - component: {fileID: -2793170672801400219}
+  - component: {fileID: 6676057433354191840}
   - component: {fileID: 5272654178804140462}
-  - component: {fileID: 4011868647533632111}
   - component: {fileID: 5061687849970511563}
   - component: {fileID: 1018265261263250365}
+  - component: {fileID: 4011868647533632111}
   m_Layer: 6
   m_Name: MyPlayer
   m_TagString: Player
@@ -108,6 +109,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 100
+--- !u!114 &7194583555967069841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942460987253603177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f14014c8b7424cc4f8939c686117516b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sphereBuffer: {fileID: 6998222271887524906}
 --- !u!114 &3377843199504292780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,19 +138,6 @@ MonoBehaviour:
   animator: {fileID: 655086262283799631}
   spinPower: 180
   forwardPower: 360
---- !u!114 &7194583555967069841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1942460987253603177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f14014c8b7424cc4f8939c686117516b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sphereBuffer: {fileID: 6998222271887524906}
 --- !u!114 &-2793170672801400219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,6 +162,23 @@ MonoBehaviour:
   bulletOffset: 60
   cooldownStart: 0.3
   chargeCooldownStart: 1
+--- !u!114 &6676057433354191840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942460987253603177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25cf0a31ef8e5934699bb4ad9daa1870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MyThruster
+  bulletPrefab: {fileID: 8958506868901912361, guid: 140b422606d59bc4fb19ec4ce8692631, type: 3}
+  deployDistance: {x: 0, y: 0, z: 0}
+  dropDelayStart: 0.15
+  dropDelayVariation: 0.05
+  bulletSpeed: 300
 --- !u!114 &5272654178804140462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,19 +216,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4011868647533632111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1942460987253603177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e78a6953778bade428f1b868ee190a03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameStartClip: {fileID: 8300000, guid: 67d9d2d9262f0b14e9c17f8abf133ffc, type: 3}
 --- !u!114 &5061687849970511563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,6 +245,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   power: {fileID: 5061687849970511563}
   armorCutoff: 0.2
+--- !u!114 &4011868647533632111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942460987253603177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e78a6953778bade428f1b868ee190a03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStartClip: {fileID: 8300000, guid: 67d9d2d9262f0b14e9c17f8abf133ffc, type: 3}
 --- !u!1 &2124357944695459930
 GameObject:
   m_ObjectHideFlags: 0

@@ -688,7 +688,7 @@ PrefabInstance:
     - target: {fileID: 7194583555967069841, guid: a2d650c4a99f3934e87d3edb98744f24, type: 3}
       propertyPath: sphereBuffer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1473095040}
     - target: {fileID: 7382060609632690288, guid: a2d650c4a99f3934e87d3edb98744f24, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1361,6 +1361,11 @@ Transform:
 --- !u!54 &1473095028 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 5864120440882639698, guid: a2d650c4a99f3934e87d3edb98744f24, type: 3}
+  m_PrefabInstance: {fileID: 522757016}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &1473095040 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 6998222271887524906, guid: a2d650c4a99f3934e87d3edb98744f24, type: 3}
   m_PrefabInstance: {fileID: 522757016}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807

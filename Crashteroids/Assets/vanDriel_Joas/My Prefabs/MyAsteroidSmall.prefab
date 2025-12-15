@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7628191476058788939}
   - component: {fileID: 7442458116112690153}
+  - component: {fileID: 6483877049493051519}
   m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
@@ -90,6 +91,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6483877049493051519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3373216342226843721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e010d52a6e120445b3d8c2493d1e1ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MySpawnRandom
+  randomSprite:
+  - {fileID: 21300000, guid: 96f3b097c5c721e4db18712b9424967b, type: 3}
+  - {fileID: 21300000, guid: 3a6545dd803676f42bd3e5fa805999cb, type: 3}
+  - {fileID: 21300000, guid: ed797913a049c564d863577a998eb0ce, type: 3}
+  - {fileID: 21300000, guid: 0129777868f3d944ebfdd82abd456b2d, type: 3}
+  - {fileID: 21300000, guid: 7539823373fb2c941b17db0b874fc773, type: 3}
+  spriteRenderer: {fileID: 7442458116112690153}
 --- !u!1 &6689194817083154363
 GameObject:
   m_ObjectHideFlags: 0
