@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyHP: {fileID: 5272654178804140462, guid: a2d650c4a99f3934e87d3edb98744f24, type: 3}
-  pointWorth: 50
+  pointWorth: 10
 --- !u!114 &7050193767575096018
 MonoBehaviour:
   m_ObjectHideFlags: 0

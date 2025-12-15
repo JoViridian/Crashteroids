@@ -7,12 +7,12 @@ public class MyThruster : MonoBehaviour
     public GameObject bulletPrefab;
     //public AudioClip simpleBoost;
     public Vector3 deployDistance;
-    private float dropOffset = -0.5f;
-    public float dropDelayStart = 0.15f;
-    public float dropDelayVariation = 0.05f;
+    private float dropOffset = -0.7f;
+    public float dropDelayStart = 0.05f;
+    public float dropDelayVariation = 0.03f;
     private float dropDelay;
     public float bulletSpeed = 300;
-    private int bulletOffset = 60;
+    private int bulletOffset = 90;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

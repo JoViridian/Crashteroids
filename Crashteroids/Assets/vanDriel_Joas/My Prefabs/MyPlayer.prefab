@@ -176,8 +176,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MyThruster
   bulletPrefab: {fileID: 8958506868901912361, guid: 140b422606d59bc4fb19ec4ce8692631, type: 3}
   deployDistance: {x: 0, y: 0, z: 0}
-  dropDelayStart: 0.15
-  dropDelayVariation: 0.05
+  dropDelayStart: 0.05
+  dropDelayVariation: 0.03
   bulletSpeed: 300
 --- !u!114 &5272654178804140462
 MonoBehaviour:
@@ -739,7 +739,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8159130180228204578}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 817ac7424f0592747b636cc053d660da, type: 2}
   m_CullingMode: 0

@@ -9,12 +9,12 @@ public class MyPlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             transform.Rotate(0, spinPower * Time.deltaTime, 0);
         }
 
-        if (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Rotate(0, -spinPower * Time.deltaTime, 0);
         }
@@ -22,11 +22,11 @@ public class MyPlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             rocket.AddRelativeForce(0, 0, forwardPower * Time.deltaTime);
-            animator.SetBool("Thrusting", true);
+            //animator.SetBool("Thrusting", true);
         }
         else
         {
-            animator.SetBool("Thrusting", false);
+            //animator.SetBool("Thrusting", false);
         }
     }
 }

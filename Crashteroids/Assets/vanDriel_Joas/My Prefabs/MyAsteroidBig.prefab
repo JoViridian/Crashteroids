@@ -86,7 +86,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4045754121921911406, guid: 3148a2083944696448386a0dd2f3a2f1, type: 3}
       propertyPath: hp
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4045754121921911406, guid: 3148a2083944696448386a0dd2f3a2f1, type: 3}
       propertyPath: hitSound
@@ -154,7 +154,7 @@ PrefabInstance:
       objectReference: {fileID: 1942460987253603177, guid: a2d650c4a99f3934e87d3edb98744f24, type: 3}
     - target: {fileID: 4158039900856695253, guid: 3148a2083944696448386a0dd2f3a2f1, type: 3}
       propertyPath: pointWorth
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6155985351469415534, guid: 3148a2083944696448386a0dd2f3a2f1, type: 3}
       propertyPath: m_Enabled

@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   complexDamage: 0
-  damagePower: 1
+  damagePower: 2
   defenseTotal: 1
 --- !u!1 &6888747993672653468
 GameObject:
