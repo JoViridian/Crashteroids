@@ -187,6 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupSound: {fileID: 8300000, guid: ab5bc8f34a2f6da4faa96b71817631db, type: 3}
+  effectHit: {fileID: 7904470917866139534, guid: 1792a5b93623b424588c40cd8a46676d, type: 3}
   value: 1
 --- !u!114 &-1951664812731719442
 MonoBehaviour:

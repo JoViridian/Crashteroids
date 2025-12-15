@@ -28,7 +28,7 @@ public class MyHP : MonoBehaviour
         if (hp <= 0)
         {
             Instantiate(effectDeath, transform.position, transform.rotation);
-            AudioManager.Instance.PlayClip(deathSound);
+            AudioManagerAltered.Instance.PlayClip(deathSound, 1f);
             onDestroy.Invoke();
             Destroy(gameObject);
         }
@@ -45,7 +45,7 @@ public class MyHP : MonoBehaviour
 
             invincibilityCountdown = invincibility;
             Instantiate(effectHit, transform.position, transform.rotation);
-            AudioManager.Instance.PlayClip(hitSound);
+            AudioManagerAltered.Instance.PlayClip(hitSound, 1f);
         }
     }
 }

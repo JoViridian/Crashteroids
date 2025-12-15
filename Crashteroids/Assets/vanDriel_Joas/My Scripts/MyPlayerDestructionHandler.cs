@@ -6,7 +6,7 @@ public class MyPlayerDestructionHandler : MonoBehaviour
 
     void Start()
     {
-        AudioManager.Instance.PlayClip(gameStartClip);
+        AudioManagerAltered.Instance.PlayClip(gameStartClip, 1f);
     }
 
     public void DestroyResult()

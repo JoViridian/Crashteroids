@@ -1,11 +1,9 @@
-using System.Net.Sockets;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class MyThruster : MonoBehaviour
 {
     public GameObject bulletPrefab;
-    //public AudioClip simpleBoost;
+    public AudioClip[] randomThrusterSound = new AudioClip[3];
     public Vector3 deployDistance;
     private float dropOffset = -0.7f;
     public float dropDelayStart = 0.05f;
@@ -41,12 +39,11 @@ public class MyThruster : MonoBehaviour
             bulletInstance.GetComponent<Rigidbody>().AddRelativeForce(rotation, 0, -bulletSpeed);
 
             dropDelay = dropDelayStart + Random.Range(-dropDelayVariation, dropDelayVariation);
+            AudioManagerAltered.Instance.PlayRandomClip(randomThrusterSound, 0.25f);
         }
         else
         {
             dropDelay -= Time.deltaTime;
         }
-
-        //AudioManager.Instance.PlayClip(simpleBoost);
     }
 }

@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AsteroidHitSmallAltered
       objectReference: {fileID: 0}
+    - target: {fileID: 6113765954060319454, guid: 2e78c0f79492eec4f938d761d56864fb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 76fd6fa6d318cb64eb3d96aeafa37c68, type: 2}
     - target: {fileID: 7024090440821451522, guid: 2e78c0f79492eec4f938d761d56864fb, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
       value: 3

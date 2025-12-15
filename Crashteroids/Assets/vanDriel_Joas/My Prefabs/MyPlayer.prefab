@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -2793170672801400219}
   - component: {fileID: 6676057433354191840}
   - component: {fileID: 5272654178804140462}
+  - component: {fileID: 8636593045200870793}
   - component: {fileID: 5061687849970511563}
   - component: {fileID: 1018265261263250365}
   - component: {fileID: 4011868647533632111}
@@ -175,6 +176,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MyThruster
   bulletPrefab: {fileID: 8958506868901912361, guid: 140b422606d59bc4fb19ec4ce8692631, type: 3}
+  randomThrusterSound:
+  - {fileID: 8300000, guid: cad2698369a96b046bdf811984361575, type: 3}
+  - {fileID: 8300000, guid: 909d5cfe0c21b4b49861da5696f52d64, type: 3}
+  - {fileID: 8300000, guid: 2de8865a35da7404abc9d8507fefe7e7, type: 3}
   deployDistance: {x: 0, y: 0, z: 0}
   dropDelayStart: 0.05
   dropDelayVariation: 0.03
@@ -216,6 +221,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8636593045200870793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942460987253603177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee1fa407783d622469d12af90c4506ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MyHeart
+  hp: {fileID: 5272654178804140462}
+  SpriteRenderer: {fileID: 6408773966255994622}
+  color1: {r: 0.41568628, g: 0.9529412, b: 0.5529412, a: 1}
+  color2: {r: 0.62352943, g: 0.9607843, b: 0.36862746, a: 1}
+  color3: {r: 1, g: 0.94509804, b: 0.39215687, a: 1}
+  color4: {r: 0.99215686, g: 0.60784316, b: 0.3137255, a: 1}
+  color5: {r: 0.972549, g: 0.4862745, b: 0.44313726, a: 1}
 --- !u!114 &5061687849970511563
 MonoBehaviour:
   m_ObjectHideFlags: 0

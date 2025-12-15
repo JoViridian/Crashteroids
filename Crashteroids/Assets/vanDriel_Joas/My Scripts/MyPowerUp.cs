@@ -3,6 +3,7 @@ using UnityEngine;
 public class MyPowerUp : MonoBehaviour
 {
     public AudioClip pickupSound;
+    public GameObject effectHit;
     public int value = 10;
 
     private void OnCollisionEnter(Collision collision)
@@ -15,7 +16,8 @@ public class MyPowerUp : MonoBehaviour
             }
 
             GameManagerAltered.Instance.score += value;
-            AudioManager.Instance.PlayClip(pickupSound);
+            AudioManagerAltered.Instance.PlayClip(pickupSound, 0.5f);
+            Instantiate(effectHit, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     } 

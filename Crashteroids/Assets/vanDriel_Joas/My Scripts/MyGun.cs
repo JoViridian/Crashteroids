@@ -60,7 +60,7 @@ public class MyGun : MonoBehaviour
         GameObject bulletInstance = Instantiate(bulletPrefab, deployDistance, transform.rotation);
         bulletInstance.gameObject.transform.Rotate(0, bulletRotationMult * rotation, 0);
         bulletInstance.GetComponent<Rigidbody>().AddRelativeForce(rotation, 0, bulletSpeed);
-        AudioManager.Instance.PlayRandomClip(randomBulletSound);
+        AudioManagerAltered.Instance.PlayRandomClip(randomBulletSound, 0.75f);
     }
 
     private void DoShootBig()
@@ -68,7 +68,7 @@ public class MyGun : MonoBehaviour
         // creates a bulltet and then gives that bullet velocity  and rotation based on the player's rotation
         GameObject bulletInstance = Instantiate(bulletPrefabBig, deployDistance, transform.rotation);
         bulletInstance.GetComponent<Rigidbody>().AddRelativeForce(0, 0, bulletSpeedMult * bulletSpeed);
-        AudioManager.Instance.PlayClip(simpleBullet);
+        AudioManagerAltered.Instance.PlayClip(simpleBullet, 1f);
 
         // gives the player recoil
         Rigidbody rb = gameObject.GetComponent<Rigidbody>();

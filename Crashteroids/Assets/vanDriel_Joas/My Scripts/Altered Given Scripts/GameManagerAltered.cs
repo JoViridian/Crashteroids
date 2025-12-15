@@ -77,7 +77,7 @@ public class GameManagerAltered : MonoBehaviour
         if (gameOverDelay < 0)
         {
             SceneManager.LoadScene("GameOver");
-            AudioManager.Instance.PlayClip(gameEndClip);
+            AudioManagerAltered.Instance.PlayClip(gameEndClip, 1f);
         }
     }
 
