@@ -137,7 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rocket: {fileID: 5864120440882639698}
   animator: {fileID: 655086262283799631}
-  spinPower: 180
+  spinPower: 270
   forwardPower: 360
 --- !u!114 &-2793170672801400219
 MonoBehaviour:
@@ -161,8 +161,9 @@ MonoBehaviour:
   deployDistance: {x: 0, y: 0, z: 0}
   bulletSpeed: 300
   bulletOffset: 60
+  pushBack: 200
   cooldownStart: 0.3
-  chargeCooldownStart: 1
+  chargeCooldownStart: 2
 --- !u!114 &6676057433354191840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,6 +236,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MyHeart
   hp: {fileID: 5272654178804140462}
   SpriteRenderer: {fileID: 6408773966255994622}
+  smokeEffect: {fileID: 7283013268806064561, guid: b10ad6aff3ca05e43b9de47f6a2d6b9a, type: 3}
+  smokeTimerMax: 0.1
   color1: {r: 0.41568628, g: 0.9529412, b: 0.5529412, a: 1}
   color2: {r: 0.62352943, g: 0.9607843, b: 0.36862746, a: 1}
   color3: {r: 1, g: 0.94509804, b: 0.39215687, a: 1}

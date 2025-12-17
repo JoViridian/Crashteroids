@@ -62,10 +62,10 @@ PrefabInstance:
       addedObject: {fileID: 7918306834164296535}
     - targetCorrespondingSourceObject: {fileID: 5733837383095713682, guid: 23cfe9b203453b7428f9985418ac1d04, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3796634808021321012}
+      addedObject: {fileID: 2374437546486311208}
     - targetCorrespondingSourceObject: {fileID: 5733837383095713682, guid: 23cfe9b203453b7428f9985418ac1d04, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2374437546486311208}
+      addedObject: {fileID: 7405415235088674622}
   m_SourcePrefab: {fileID: 100100000, guid: 23cfe9b203453b7428f9985418ac1d04, type: 3}
 --- !u!1 &3519557122924322706 stripped
 GameObject:
@@ -85,7 +85,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManagerAltered
   sourcePrefab: {fileID: 865023635182849879, guid: b79be5ac5fd87244c8b32c452ae88f4e, type: 3}
---- !u!82 &3796634808021321012
+--- !u!114 &2374437546486311208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3519557122924322706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cca449d530c15549ac4913d84ee8e6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManagerAltered
+  sourcePrefab: {fileID: 865023635182849879, guid: b79be5ac5fd87244c8b32c452ae88f4e, type: 3}
+--- !u!82 &7405415235088674622
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,16 +195,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2374437546486311208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3519557122924322706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cca449d530c15549ac4913d84ee8e6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AudioManagerAltered
-  sourcePrefab: {fileID: 865023635182849879, guid: b79be5ac5fd87244c8b32c452ae88f4e, type: 3}

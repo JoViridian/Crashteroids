@@ -660,8 +660,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManagerAltered
       objectReference: {fileID: 0}
+    - target: {fileID: 3519557122924322706, guid: 9f5e4e74a2a39784f85d43b900276f3a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796634808021321012, guid: 9f5e4e74a2a39784f85d43b900276f3a, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 4055160503844354901, guid: 9f5e4e74a2a39784f85d43b900276f3a, type: 3}
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

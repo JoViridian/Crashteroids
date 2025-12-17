@@ -14,43 +14,49 @@ public class MyGun : MonoBehaviour
     private float bulletSpeedMult = 5;
     private float bulletRotationMult = 0.25f;
     public int bulletOffset = 60;
-    private float pushBack = 150;
+    public float pushBack = 150;
 
     public float cooldownStart = 0.1f;
     public float chargeCooldownStart = 1f;
-    private float cooldown;
+    private float cooldown1;
+    private float cooldown2;
     private float cooldownShow;
     private float cooldownShowMult = 0.2f;
 
     void Start()
     {
-        cooldown = cooldownStart;
+        cooldown1 = cooldownStart;
+        cooldown2 = chargeCooldownStart;
     }
 
     void Update()
     {
         // places bullet in front of player nose only when both conditions met
-        if((Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.Space)) && cooldown <= 0) 
+        if ((Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.Space)) && cooldown1 <= 0) 
         {
             deployDistance = transform.TransformPoint(0, 0, dropOffset);
             DoShoot(-bulletOffset);
             DoShoot(bulletOffset);
             DoShoot(0);
-            cooldown = cooldownStart;
+            cooldown1 = cooldownStart;
+        }
+        else
+        {
+            cooldown1 -= Time.deltaTime;
+        }
+
+        if ((Input.GetMouseButtonDown(1) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) && cooldown2 <= 0)
+        {
+            deployDistance = transform.TransformPoint(0, 0, dropOffset);
+            DoShootBig();
+            cooldown2 = chargeCooldownStart;
         }
         else
         {
             // slightly darkens the spaceship sprite when on cooldown
-            cooldownShow = 1 - cooldownShowMult * cooldown;
-            cooldown -= Time.deltaTime;
+            cooldownShow = 1 - cooldownShowMult * cooldown2;
+            cooldown2 -= Time.deltaTime;
             cooldownEffect.color = new Color(cooldownShow, cooldownShow, cooldownShow, 1);
-        }
-
-        if ((Input.GetMouseButtonDown(1) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) && cooldown <= 0)
-        {
-            deployDistance = transform.TransformPoint(0, 0, dropOffset);
-            DoShootBig();
-            cooldown = chargeCooldownStart;
         }
     }
 
