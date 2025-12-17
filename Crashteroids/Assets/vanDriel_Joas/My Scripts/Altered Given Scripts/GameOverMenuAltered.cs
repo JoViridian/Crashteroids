@@ -9,6 +9,7 @@ public class GameOverMenuAltered : MonoBehaviour
     public TextMeshProUGUI titleTextBox;
     public TextMeshProUGUI startTextBox;
     public HighscoreScript script;
+    public GameObject logo;
 
     private void Start()
     {
@@ -17,14 +18,16 @@ public class GameOverMenuAltered : MonoBehaviour
         // repurposes the scene into the start screen if the normal scene has not been loaded yet this play session
         if (GameManagerAltered.gameStart == true)
         {
+            logo.SetActive(false);
             DoScoreUpdate();
             titleTextBox.text = "GAME OVER";
             startTextBox.text = "PRESS 'SPACE' TO RETRY \n \n PRESS 'ESCAPE' TO CLOSE GAME";
         }
         else
         {
-            finalScoreTextBox.text = "HIGH SCORE:" + script.highscore.ToString();
-            titleTextBox.text = "CRASHTEROIDS";
+            logo.SetActive(true);
+            finalScoreTextBox.text = "\n \n HIGH SCORE:" + script.highscore.ToString();
+            titleTextBox.text = "";
             startTextBox.text = "PRESS 'SPACE' TO START \n \n PRESS 'ESCAPE' TO CLOSE GAME";
         }
     }
