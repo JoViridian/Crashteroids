@@ -11,14 +11,18 @@ public class GameManagerAltered : MonoBehaviour
 
     public List<GameObject> asteroidTotal = new List<GameObject>();
     public TextMeshProUGUI scoreTextBox;
+    public TextMeshProUGUI scoreAdderTextBox;
     public TextMeshProUGUI hpTextBox;
-    public GameObject player;
+    public MyHP playerHp;
     public AudioClip gameEndClip;
     public HighscoreScript script;
 
     // static is not neccesary here, but too lazy to change formatting in all other scripts
     public int score;
     public static int finalScore;
+    public static int scoreGain;
+    public float scoreTimer;
+    public float scoreTimerReset;
     public static float gameOverDelay;
     public static bool playerState;
     public static bool gameStart;
@@ -45,6 +49,7 @@ public class GameManagerAltered : MonoBehaviour
         highscoreGet = false;
 
         score = 0;
+        scoreTimer = 0;
         gameOverDelay = 1;
         asteroidSpeed = 1.2f;
     }
@@ -63,14 +68,16 @@ public class GameManagerAltered : MonoBehaviour
 
         if (playerState)
         {
-            hpTextBox.text = "HP: " + player.GetComponent<MyHP>().hp.ToString() + "%";
-            scoreTextBox.text = score.ToString();
+            hpTextBox.text = "" + playerHp.hp.ToString() + "%";
+            scoreTextBox.text = scoreGain.ToString();
+            DoScoreAddition();
         }
         else
         {
             gameOverDelay -= Time.deltaTime;
-            hpTextBox.text = "HP: 0%";
+            hpTextBox.text = "0%";
             scoreTextBox.text = finalScore.ToString();
+            scoreAdderTextBox.text = "";
             DoHighscoreCheck();
         }
 
@@ -81,12 +88,32 @@ public class GameManagerAltered : MonoBehaviour
         }
     }
 
-    private void DoHighscoreCheck()
+    public void DoHighscoreCheck()
     {
         if (finalScore > script.highscore)
         {
             highscoreGet = true;
             script.highscore = finalScore;
         }
+    }
+
+    private void DoScoreAddition()
+    {
+        if (scoreGain >= score)
+        {
+            scoreGain = score;  
+            scoreAdderTextBox.text = "";
+        }
+        else
+        {
+            if (scoreTimer <= 0)
+            {
+                scoreGain += ((score - scoreGain) / 10) + 1;
+            }
+
+            scoreAdderTextBox.text = "+ " + (score - scoreGain).ToString();
+        }
+
+        scoreTimer -= Time.deltaTime;
     }
 }

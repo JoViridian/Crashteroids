@@ -1,3 +1,4 @@
+using System.Drawing;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,10 +11,14 @@ public class GameOverMenuAltered : MonoBehaviour
     public TextMeshProUGUI startTextBox;
     public HighscoreScript script;
     public GameObject logo;
+    // stands for Highlight Color Start and End
+    private string hCs = "<color=#5ef965ff>";
+    private string hCe = "</color =#5ef965ff>";
+
 
     private void Start()
     {
-        finalScoreTextBox.text = "FINAL SCORE:" + GameManagerAltered.finalScore.ToString();
+        finalScoreTextBox.text = "FINAL SCORE: " + hCs + GameManagerAltered.finalScore.ToString() + hCe;
 
         // repurposes the scene into the start screen if the normal scene has not been loaded yet this play session
         if (GameManagerAltered.gameStart == true)
@@ -21,14 +26,14 @@ public class GameOverMenuAltered : MonoBehaviour
             logo.SetActive(false);
             DoScoreUpdate();
             titleTextBox.text = "GAME OVER";
-            startTextBox.text = "PRESS 'SPACE' TO RETRY \n \n PRESS 'ESCAPE' TO CLOSE GAME";
+            startTextBox.text = "PRESS <color=#ce6df1ff>SPACE</color=#ce6df1ff> TO RETRY \n \n PRESS <color=#ce6df1ff>ESCAPE</color=#ce6df1ff> TO CLOSE GAME";
         }
         else
         {
             logo.SetActive(true);
-            finalScoreTextBox.text = "\n \n HIGH SCORE:" + script.highscore.ToString();
+            finalScoreTextBox.text = "\n \n HIGH SCORE: " + hCs + script.highscore.ToString() + hCe;
             titleTextBox.text = "";
-            startTextBox.text = "PRESS 'SPACE' TO START \n \n PRESS 'ESCAPE' TO CLOSE GAME";
+            startTextBox.text = "PRESS <color=#ce6df1ff>SPACE</color=#ce6df1ff> TO START \n \n PRESS <color=#ce6df1ff>ESCAPE</color=#ce6df1ff> TO CLOSE GAME";
         }
     }
 
@@ -50,12 +55,12 @@ public class GameOverMenuAltered : MonoBehaviour
         // updates the highscore and allows it to be called in a future play session
         if (GameManagerAltered.highscoreGet)
         {
-            finalScoreTextBox.text = "FINAL SCORE:" + GameManagerAltered.finalScore.ToString() + "\n \n NEW HIGH SCORE:" + script.highscore.ToString();
+            finalScoreTextBox.text = "FINAL SCORE: " + hCs + GameManagerAltered.finalScore.ToString() + hCe + "\n \n <color=#6af3c0ff>NEW HIGH SCORE:</color=#6af3c0ff> " + hCs + script.highscore.ToString() + hCe;
             PlayerPrefs.SetInt("Highscore", script.highscore);
         }
         else
         {
-            finalScoreTextBox.text = "FINAL SCORE:" + GameManagerAltered.finalScore.ToString() + "\n \n HIGH SCORE:" + script.highscore.ToString();
+            finalScoreTextBox.text = "FINAL SCORE: " + hCs + GameManagerAltered.finalScore.ToString() + hCe + "\n \n HIGH SCORE: " + hCs + script.highscore.ToString() + hCe;
         }
     }
 }

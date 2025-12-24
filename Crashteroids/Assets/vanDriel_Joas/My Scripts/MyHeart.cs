@@ -5,8 +5,13 @@ public class MyHeart : MonoBehaviour
     public MyHP hp;
     public SpriteRenderer SpriteRenderer;
     public GameObject smokeEffect;
+    public GameObject coreTransform;
+    private int pulseState;
+    private float pulsePanic;
+    private float pulseTimer;
     private float smokeTimerMain;
     public float smokeTimerMax;
+
     private int hpState;
     public Color color1;
     public Color color2;
@@ -17,13 +22,14 @@ public class MyHeart : MonoBehaviour
     void Start()
     {
         smokeTimerMain = smokeTimerMax;
+        pulseState = 3;
+        pulseTimer = 5;
     }
 
     // Update is called once per frame
     void Update()
     {
         hpState = Mathf.FloorToInt((hp.hp - 1) / 20);
-        Debug.Log(hpState);
 
         switch(hpState)
         {
@@ -31,21 +37,28 @@ public class MyHeart : MonoBehaviour
                 SpriteRenderer.color = color5;
                 DoSmoke();
                 DoSmoke();
+                pulsePanic = 0.5f;
                 break;
             case 1: 
                 SpriteRenderer.color = color4;
+                pulsePanic = 1.0f;
                 DoSmoke();
                 break;
             case 2: 
-                SpriteRenderer.color = color3; 
+                SpriteRenderer.color = color3;
+                pulsePanic = 2.0f;
                 break;
             case 3: 
-                SpriteRenderer.color = color2; 
+                SpriteRenderer.color = color2;
+                pulsePanic = 3.0f;
                 break;
             case 4: 
-                SpriteRenderer.color = color1; 
+                SpriteRenderer.color = color1;
+                pulsePanic = 4.0f;
                 break;
         }
+
+        DoHeartbeat();
     }
 
     private void DoSmoke()
@@ -58,6 +71,55 @@ public class MyHeart : MonoBehaviour
         else
         {
             smokeTimerMain -= Time.deltaTime;
+        }
+    }
+
+    private void DoHeartbeat()
+    {
+        if(pulseState == 1)
+        {
+            coreTransform.transform.localScale *= (1 + Time.deltaTime);
+            PulseCheck(1.2f, true);
+        }
+        else if(pulseState == 2)
+        {
+            coreTransform.transform.localScale *= (1 - Time.deltaTime);
+            PulseCheck(1, false);
+        }
+        else if (pulseState == 3)
+        {
+            DoPulseTimer();
+        }
+    }
+
+    private void PulseCheck(float a, bool b)
+    {
+        if(b)
+        {
+            if (coreTransform.transform.localScale.x >= a)
+            {
+                pulseState++;
+            }
+        }
+        else
+        {
+            if (coreTransform.transform.localScale.x <= a)
+            {
+                pulseState++;
+            }
+        }
+    }
+
+    private void DoPulseTimer()
+    {
+        if (pulseTimer <= 0)
+        {
+            pulseTimer = pulsePanic;
+            pulseState = 1;
+        }
+        else
+        {
+            pulseTimer -= Time.deltaTime;
         }
     }
 }

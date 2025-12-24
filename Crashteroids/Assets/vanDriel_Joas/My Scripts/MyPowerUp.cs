@@ -16,6 +16,7 @@ public class MyPowerUp : MonoBehaviour
             }
 
             GameManagerAltered.Instance.score += value;
+            GameManagerAltered.Instance.scoreTimer = GameManagerAltered.Instance.scoreTimerReset;
             AudioManagerAltered.Instance.PlayClip(pickupSound, 0.5f);
             Instantiate(effectHit, transform.position, transform.rotation);
             Destroy(gameObject);

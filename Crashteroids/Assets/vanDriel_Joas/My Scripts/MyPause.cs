@@ -25,6 +25,7 @@ public class MyPause : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Escape))
             {
+                GameManagerAltered.Instance.DoHighscoreCheck();
                 Application.Quit();
             }
 

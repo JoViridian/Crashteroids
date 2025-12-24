@@ -11,6 +11,7 @@ public class MyScoreOnDestroy : MonoBehaviour
         if (MyHP.hp >= 1)
         {
             GameManagerAltered.Instance.score += pointWorth;
+            GameManagerAltered.Instance.scoreTimer = GameManagerAltered.Instance.scoreTimerReset;
         }
     }
 }

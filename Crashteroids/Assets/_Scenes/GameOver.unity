@@ -196,8 +196,8 @@ MonoBehaviour:
 
     Press ''ESCAPE'' to close game'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2743615fa1367e640bfb2d80ec03e0b4, type: 2}
-  m_sharedMaterial: {fileID: -919263143881968110, guid: 2743615fa1367e640bfb2d80ec03e0b4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a35e8908532f20b45bf28b6151726599, type: 2}
+  m_sharedMaterial: {fileID: 888667602280181188, guid: a35e8908532f20b45bf28b6151726599, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -686,8 +686,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "FINAL SCORE: \n\nHIGH SCORE:"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2743615fa1367e640bfb2d80ec03e0b4, type: 2}
-  m_sharedMaterial: {fileID: -919263143881968110, guid: 2743615fa1367e640bfb2d80ec03e0b4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a35e8908532f20b45bf28b6151726599, type: 2}
+  m_sharedMaterial: {fileID: 888667602280181188, guid: a35e8908532f20b45bf28b6151726599, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -897,8 +897,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Game over
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2743615fa1367e640bfb2d80ec03e0b4, type: 2}
-  m_sharedMaterial: {fileID: -919263143881968110, guid: 2743615fa1367e640bfb2d80ec03e0b4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a35e8908532f20b45bf28b6151726599, type: 2}
+  m_sharedMaterial: {fileID: 888667602280181188, guid: a35e8908532f20b45bf28b6151726599, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

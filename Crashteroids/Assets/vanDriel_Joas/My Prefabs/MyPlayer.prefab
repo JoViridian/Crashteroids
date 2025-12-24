@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 5061687849970511563}
   - component: {fileID: 1018265261263250365}
   - component: {fileID: 4011868647533632111}
+  - component: {fileID: 6668824524745352297}
   m_Layer: 6
   m_Name: MyPlayer
   m_TagString: Player
@@ -237,6 +238,7 @@ MonoBehaviour:
   hp: {fileID: 5272654178804140462}
   SpriteRenderer: {fileID: 6408773966255994622}
   smokeEffect: {fileID: 7283013268806064561, guid: b10ad6aff3ca05e43b9de47f6a2d6b9a, type: 3}
+  coreTransform: {fileID: 2124357944695459930}
   smokeTimerMax: 0.1
   color1: {r: 0.41568628, g: 0.9529412, b: 0.5529412, a: 1}
   color2: {r: 0.62352943, g: 0.9607843, b: 0.36862746, a: 1}
@@ -285,6 +287,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameStartClip: {fileID: 8300000, guid: 67d9d2d9262f0b14e9c17f8abf133ffc, type: 3}
+--- !u!114 &6668824524745352297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942460987253603177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9392be6aa27699d468d35a8ccf1990d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MyStabilizer
 --- !u!1 &2124357944695459930
 GameObject:
   m_ObjectHideFlags: 0
