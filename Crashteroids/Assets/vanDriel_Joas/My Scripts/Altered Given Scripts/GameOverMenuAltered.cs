@@ -1,4 +1,3 @@
-using System.Drawing;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,34 +5,25 @@ using UnityEngine.SceneManagement;
 public class GameOverMenuAltered : MonoBehaviour
 {
     public string levelName;
+    public bool gamePlayed;
     public TextMeshProUGUI finalScoreTextBox;
-    public TextMeshProUGUI titleTextBox;
-    public TextMeshProUGUI startTextBox;
     public HighscoreScript script;
-    public GameObject logo;
     // stands for Highlight Color Start and End
     private string hCs = "<color=#5ef965ff>";
     private string hCe = "</color =#5ef965ff>";
-
 
     private void Start()
     {
         finalScoreTextBox.text = "FINAL SCORE: " + hCs + GameManagerAltered.finalScore.ToString() + hCe;
 
         // repurposes the scene into the start screen if the normal scene has not been loaded yet this play session
-        if (GameManagerAltered.gameStart == true)
+        if (gamePlayed == true)
         {
-            logo.SetActive(false);
             DoScoreUpdate();
-            titleTextBox.text = "GAME OVER";
-            startTextBox.text = "PRESS <color=#ce6df1ff>SPACE</color=#ce6df1ff> TO RETRY \n \n PRESS <color=#ce6df1ff>ESCAPE</color=#ce6df1ff> TO CLOSE GAME";
         }
         else
         {
-            logo.SetActive(true);
             finalScoreTextBox.text = "\n \n HIGH SCORE: " + hCs + script.highscore.ToString() + hCe;
-            titleTextBox.text = "";
-            startTextBox.text = "PRESS <color=#ce6df1ff>SPACE</color=#ce6df1ff> TO START \n \n PRESS <color=#ce6df1ff>ESCAPE</color=#ce6df1ff> TO CLOSE GAME";
         }
     }
 
@@ -42,6 +32,11 @@ public class GameOverMenuAltered : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             SceneManager.LoadScene(levelName);
+        }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            SceneManager.LoadScene("Controls");
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))

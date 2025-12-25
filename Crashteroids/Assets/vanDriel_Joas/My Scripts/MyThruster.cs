@@ -21,7 +21,7 @@ public class MyThruster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(GameManagerAltered.Instance.script.keyForward))
         {
             deployDistance = transform.TransformPoint(0, 0, dropOffset);
             DoProjectile(bulletOffset);

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MyPause : MonoBehaviour
 {
@@ -26,9 +27,8 @@ public class MyPause : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 GameManagerAltered.Instance.DoHighscoreCheck();
-                Application.Quit();
+                SceneManager.LoadScene("level1");
             }
-
         }
         else
         {

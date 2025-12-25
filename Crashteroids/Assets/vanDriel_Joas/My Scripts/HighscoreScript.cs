@@ -4,6 +4,11 @@ using UnityEngine;
 public class HighscoreScript : ScriptableObject
 {
     public int highscore;
+    public KeyCode keyForward;
+    public KeyCode keyTurnLeft;
+    public KeyCode keyTurnRight;
+    public KeyCode keyShoot1;
+    public KeyCode keyShoot2;
 
     // allows highscore to be recalled in a future play session
     void Awake()

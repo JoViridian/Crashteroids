@@ -179,11 +179,11 @@ MonoBehaviour:
   m_text: '
 
 
-    PRESS <color=#ce6df1ff>P</color=#ce6df1ff> TO RESUME
+    PRESS <color=#b9cdcdff>P</color=b9cdcdff> TO RESUME
 
 
     PRESS
-    <color=#ce6df1ff>ESCAPE</color=#ce6df1ff> TO CLOSE GAME'
+    <color=#b9cdcdff>escape</color=b9cdcdff> TO QUIT'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a35e8908532f20b45bf28b6151726599, type: 2}
   m_sharedMaterial: {fileID: 888667602280181188, guid: a35e8908532f20b45bf28b6151726599, type: 2}
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &46230147

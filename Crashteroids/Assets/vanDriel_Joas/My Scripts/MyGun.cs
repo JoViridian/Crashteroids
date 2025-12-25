@@ -32,7 +32,7 @@ public class MyGun : MonoBehaviour
     void Update()
     {
         // places bullet in front of player nose only when both conditions met
-        if ((Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.Space)) && cooldown1 <= 0) 
+        if (Input.GetKey(GameManagerAltered.Instance.script.keyShoot1) && cooldown1 <= 0) 
         {
             deployDistance = transform.TransformPoint(0, 0, dropOffset);
             DoShoot(-bulletOffset);
@@ -45,7 +45,7 @@ public class MyGun : MonoBehaviour
             cooldown1 -= Time.deltaTime;
         }
 
-        if ((Input.GetMouseButtonDown(1) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) && cooldown2 <= 0)
+        if (Input.GetKey(GameManagerAltered.Instance.script.keyShoot2) && cooldown2 <= 0)
         {
             deployDistance = transform.TransformPoint(0, 0, dropOffset);
             DoShootBig();
