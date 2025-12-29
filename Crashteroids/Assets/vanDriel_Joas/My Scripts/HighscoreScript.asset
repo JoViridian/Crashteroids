@@ -18,3 +18,5 @@ MonoBehaviour:
   keyTurnRight: 101
   keyShoot1: 323
   keyShoot2: 324
+  keyPause: 112
+  pauseName: <color=#b9cdcdff>P</color=b9cdcdff>

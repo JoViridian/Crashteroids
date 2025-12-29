@@ -1,9 +1,11 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MyPause : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public TextMeshProUGUI pauseText;
     private bool paused;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -14,7 +16,7 @@ public class MyPause : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(GameManagerAltered.Instance.script.keyPause))
         {
             DoPause();
         }
@@ -27,7 +29,7 @@ public class MyPause : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 GameManagerAltered.Instance.DoHighscoreCheck();
-                SceneManager.LoadScene("level1");
+                SceneManager.LoadScene("MainMenu");
             }
         }
         else
@@ -35,6 +37,8 @@ public class MyPause : MonoBehaviour
             Time.timeScale = 1f;
             pauseMenu.SetActive(false);
         }
+
+        pauseText.text = "\n \n PRESS " + GameManagerAltered.Instance.script.pauseName + " TO RESUME \n \n PRESS <color=#b9cdcdff>escape</color=b9cdcdff> TO QUIT";
     }
 
     private void DoPause()

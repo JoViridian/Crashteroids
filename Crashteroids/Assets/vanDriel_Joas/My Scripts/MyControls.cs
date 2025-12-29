@@ -6,54 +6,28 @@ public class MyControls : MonoBehaviour
 {
     private string moveControlsDisplay;
     private string shootControlsDisplay;
+    private string pauseControlDisplay;
     private int moveState;
     private int shootState;
+    private int pauseState;
     public TextMeshProUGUI TextBox;
     public HighscoreScript script;
 
     void Awake()
     {
-        if (script.keyTurnLeft == KeyCode.Q)
-        {
-            moveState = 0;
-        }
-        else if (script.keyTurnLeft == KeyCode.A)
-        {
-            moveState = 1;
-        }
-        else
-        {
-            moveState = 2;
-        }
-
-        if (script.keyShoot2 == KeyCode.Mouse1)
-        {
-            shootState = 0;
-        }
-        else if (script.keyShoot2 == KeyCode.S)
-        {
-            shootState = 1;
-        }
-        else
-        {
-            shootState = 2;
-        }
-
-        ChangeControlsMove();
-        ChangeControlsShoot();
+        ControlsCheck();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.C))
         {
             SceneManager.LoadScene("MainMenu");
         }
 
-        TextBox.text = "Movement: " + moveControlsDisplay + "\n \nShooting: " + shootControlsDisplay + "\n \nPausing: <color=#b9cdcdff>P</color=b9cdcdff>";
-
-        Debug.Log(moveState + shootState);
+        TextBox.text = "Movement: " + moveControlsDisplay + "\n \nShooting: " + shootControlsDisplay + "\n \nPausing: " + pauseControlDisplay;
     }
+
     public void ChangeControlsMove()
     {
         switch (moveState)
@@ -62,6 +36,7 @@ public class MyControls : MonoBehaviour
                 script.keyForward = KeyCode.W;
                 script.keyTurnLeft = KeyCode.Q;
                 script.keyTurnRight = KeyCode.E;
+                //PlayerPrefs.SetInt("KeyForward", (int)KeyCode.W);
                 moveControlsDisplay = "<color=#b9cdcdff>QWE</color=b9cdcdff>";
                 moveState++;
                 break;
@@ -108,5 +83,78 @@ public class MyControls : MonoBehaviour
                 shootState = 0;
                 break;
         }
+    }
+
+    public void ChangeControlsPause()
+    {
+        switch (pauseState)
+        {
+            case 0:
+                script.keyPause = KeyCode.P;
+                pauseControlDisplay = "<color=#b9cdcdff>P</color=b9cdcdff>";
+                script.pauseName = "<color=#b9cdcdff>P</color=b9cdcdff>";
+                pauseState++;
+                break;
+
+            case 1:
+                script.keyPause = KeyCode.Tab;
+                pauseControlDisplay = "<color=#b9cdcdff>TAB</color=b9cdcdff>";
+                script.pauseName = "<color=#b9cdcdff>TAB</color=b9cdcdff>";
+                pauseState++;
+                break;
+
+            case 2:
+                script.keyPause = KeyCode.Backspace;
+                pauseControlDisplay = "<color=#b9cdcdff>BACKSPACE</color=b9cdcdff>";
+                script.pauseName = "<color=#b9cdcdff>BACKSPACE</color=b9cdcdff>";
+                pauseState = 0;
+                break;
+        }
+    }
+
+    private void ControlsCheck()
+    {
+        if (script.keyTurnLeft == KeyCode.Q)
+        {
+            moveState = 0;
+        }
+        else if (script.keyTurnLeft == KeyCode.A)
+        {
+            moveState = 1;
+        }
+        else
+        {
+            moveState = 2;
+        }
+
+        if (script.keyShoot2 == KeyCode.Mouse1)
+        {
+            shootState = 0;
+        }
+        else if (script.keyShoot2 == KeyCode.S)
+        {
+            shootState = 1;
+        }
+        else
+        {
+            shootState = 2;
+        }
+
+        if (script.keyPause == KeyCode.P)
+        {
+            pauseState = 0;
+        }
+        else if (script.keyPause == KeyCode.Tab)
+        {
+            pauseState = 1;
+        }
+        else
+        {
+            pauseState = 2;
+        }
+
+        ChangeControlsMove();
+        ChangeControlsShoot();
+        ChangeControlsPause();
     }
 }
