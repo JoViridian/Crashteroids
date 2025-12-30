@@ -118,7 +118,7 @@ public class MyHeart : MonoBehaviour
         {
             pulseTimer = pulsePanic;
             pulseState = 1;
-            AudioManagerAltered.Instance.PlayClip(heartbeat, (2 + 0.5f * pulsePanic));
+            AudioManagerAltered.Instance.PlayClip(heartbeat, (4 + pulsePanic));
         }
         else
         {

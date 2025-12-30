@@ -50,7 +50,7 @@ public class AsteroidSpawnerAltered : MonoBehaviour
     {
         if (timer <= 0)
         {
-            Spawn();
+            Spawn(asteroidPrefab);
             ResetTimer();
         }
         else
@@ -59,10 +59,10 @@ public class AsteroidSpawnerAltered : MonoBehaviour
         }
     }
 
-    private void Spawn()
+    public void Spawn(GameObject prefab)
     {
         // instantiate new GO from prefab on position off screen
-        GameObject asteroidInstance = Instantiate(asteroidPrefab, GetRandomPositionOffScreen(), Quaternion.identity, transform);
+        GameObject asteroidInstance = Instantiate(prefab, GetRandomPositionOffScreen(), Quaternion.identity, transform);
         GameManagerAltered.Instance.asteroidTotal.Add(asteroidInstance);
     }
 
@@ -71,7 +71,7 @@ public class AsteroidSpawnerAltered : MonoBehaviour
         timer = Random.Range(minSpawnTime, maxSpawnTime);
     }
 
-    private Vector3 GetRandomPositionOffScreen()
+    public Vector3 GetRandomPositionOffScreen()
     {
         // randomly choose which side to spawn
         int side = Random.Range(0, 4);

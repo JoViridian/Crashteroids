@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class GameManagerAltered : MonoBehaviour
@@ -15,6 +16,7 @@ public class GameManagerAltered : MonoBehaviour
     public TextMeshProUGUI hpTextBox;
     public MyHP playerHp;
     public AudioClip gameEndClip;
+    public GameObject background;
     public HighscoreScript script;
 
     // static is not neccesary here, but too lazy to change formatting in all other scripts
@@ -33,6 +35,7 @@ public class GameManagerAltered : MonoBehaviour
     private float difficultyIncreaseSpeed = 0.0002f;
     private float minSpeed = 3;
     private float maxSpeed = 7;
+    public float cometOpportunity;
 
     private void Awake()
     {

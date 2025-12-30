@@ -10,12 +10,11 @@ public class MyPowerUp : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (collision.gameObject.GetComponent<MyHP>().hp < collision.gameObject.GetComponent<MyHP>().hpMax)
-            {
-                collision.gameObject.GetComponent<MyHP>().hp++;
-            }
+            collision.gameObject.GetComponent<MyHP>().hp += value;
+            collision.gameObject.GetComponent<MyHP>().hp = Mathf.Clamp(collision.gameObject.GetComponent<MyHP>().hp, 0, collision.gameObject.GetComponent<MyHP>().hpMax);
 
             GameManagerAltered.Instance.score += value;
+            GameManagerAltered.Instance.cometOpportunity = Random.Range(0f, 100f);
             GameManagerAltered.Instance.scoreTimer = GameManagerAltered.Instance.scoreTimerReset;
             AudioManagerAltered.Instance.PlayClip(pickupSound, 0.5f);
             Instantiate(effectHit, transform.position, transform.rotation);

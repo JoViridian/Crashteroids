@@ -26,7 +26,7 @@ public class MyGun : MonoBehaviour
     void Start()
     {
         cooldown1 = cooldownStart;
-        cooldown2 = chargeCooldownStart;
+        cooldown2 = 0;
     }
 
     void Update()
