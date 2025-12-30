@@ -490,6 +490,7 @@ MonoBehaviour:
   gamePlayed: 1
   finalScoreTextBox: {fileID: 1672453421}
   script: {fileID: 11400000, guid: 99db7fdd2f87a5e4d8c2ea8778462c24, type: 2}
+  click: {fileID: 8300000, guid: ae9ee7107c115eb4f95ec2730e88b6fa, type: 3}
 --- !u!1 &1577142612
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ public class MyHP : MonoBehaviour
     public GameObject effectDeath;
     public AudioClip deathSound;
     public AudioClip hitSound;
+    public AudioClip damageSound;
     public UnityEvent onDestroy;
     public UnityEvent onHit;
 
@@ -29,7 +30,7 @@ public class MyHP : MonoBehaviour
         if (hp <= 0)
         {
             Instantiate(effectDeath, transform.position, transform.rotation);
-            AudioManagerAltered.Instance.PlayClip(deathSound, 1f);
+            AudioManagerAltered.Instance.PlayClip(deathSound, 0.75f);
             onDestroy.Invoke();
             Destroy(gameObject);
         }
@@ -47,7 +48,9 @@ public class MyHP : MonoBehaviour
             invincibilityCountdown = invincibility;
             onHit.Invoke();
             Instantiate(effectHit, transform.position, transform.rotation);
-            AudioManagerAltered.Instance.PlayClip(hitSound, 1f);
+            AudioManagerAltered.Instance.PlayClip(damageSound, 1.5f);
         }
+
+        AudioManagerAltered.Instance.PlayClip(hitSound, 0.1f);
     }
 }

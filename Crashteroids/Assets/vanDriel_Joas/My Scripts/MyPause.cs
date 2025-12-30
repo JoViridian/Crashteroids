@@ -6,6 +6,7 @@ public class MyPause : MonoBehaviour
 {
     public GameObject pauseMenu;
     public TextMeshProUGUI pauseText;
+    public AudioClip click;
     private bool paused;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -19,6 +20,7 @@ public class MyPause : MonoBehaviour
         if (Input.GetKeyDown(GameManagerAltered.Instance.script.keyPause))
         {
             DoPause();
+            AudioManagerAltered.Instance.PlayClip(click, 0.75f);
         }
 
         if (paused)
@@ -30,6 +32,7 @@ public class MyPause : MonoBehaviour
             {
                 GameManagerAltered.Instance.DoHighscoreCheck();
                 SceneManager.LoadScene("MainMenu");
+                AudioManagerAltered.Instance.PlayClip(click, 0.75f);
             }
         }
         else

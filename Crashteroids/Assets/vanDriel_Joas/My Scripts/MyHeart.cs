@@ -1,4 +1,5 @@
 using UnityEngine;
+using static Unity.Collections.AllocatorManager;
 
 public class MyHeart : MonoBehaviour
 {
@@ -6,6 +7,7 @@ public class MyHeart : MonoBehaviour
     public SpriteRenderer SpriteRenderer;
     public GameObject smokeEffect;
     public GameObject coreTransform;
+    public AudioClip heartbeat;
     private int pulseState;
     private float pulsePanic;
     private float pulseTimer;
@@ -116,6 +118,7 @@ public class MyHeart : MonoBehaviour
         {
             pulseTimer = pulsePanic;
             pulseState = 1;
+            AudioManagerAltered.Instance.PlayClip(heartbeat, (2 + 0.5f * pulsePanic));
         }
         else
         {

@@ -820,14 +820,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    - target: {fileID: 8636593045200870793, guid: a2d650c4a99f3934e87d3edb98744f24, type: 3}
-      propertyPath: color5.b
-      value: 0.40784314
-      objectReference: {fileID: 0}
-    - target: {fileID: 8636593045200870793, guid: a2d650c4a99f3934e87d3edb98744f24, type: 3}
-      propertyPath: color5.g
-      value: 0.45490196
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -892,10 +884,6 @@ PrefabInstance:
     - target: {fileID: 3796634808021321012, guid: 9f5e4e74a2a39784f85d43b900276f3a, type: 3}
       propertyPath: Loop
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7405415235088674622, guid: 9f5e4e74a2a39784f85d43b900276f3a, type: 3}
-      propertyPath: Priority
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -1545,7 +1533,7 @@ MonoBehaviour:
   scoreAdderTextBox: {fileID: 1397225658}
   hpTextBox: {fileID: 1181885874}
   playerHp: {fileID: 1473095045}
-  gameEndClip: {fileID: 8300000, guid: 834b939a9f6d4d545b8be884ac434c5d, type: 3}
+  gameEndClip: {fileID: 8300000, guid: d2c8c17597bcde847920d671454183fb, type: 3}
   script: {fileID: 11400000, guid: 99db7fdd2f87a5e4d8c2ea8778462c24, type: 2}
   score: 0
   scoreTimer: 0
@@ -1580,6 +1568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MyPause
   pauseMenu: {fileID: 662428265}
   pauseText: {fileID: 46230146}
+  click: {fileID: 8300000, guid: ae9ee7107c115eb4f95ec2730e88b6fa, type: 3}
 --- !u!114 &1435242918
 MonoBehaviour:
   m_ObjectHideFlags: 0

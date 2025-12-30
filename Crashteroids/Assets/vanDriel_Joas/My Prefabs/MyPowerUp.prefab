@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f568b77bc8e16d4e8ae6a26349bbab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupSound: {fileID: 8300000, guid: ab5bc8f34a2f6da4faa96b71817631db, type: 3}
+  pickupSound: {fileID: 8300000, guid: 00fa0f29b52605a4ba98f2468de99cff, type: 3}
   effectHit: {fileID: 7904470917866139534, guid: 1792a5b93623b424588c40cd8a46676d, type: 3}
   value: 1
 --- !u!114 &-1951664812731719442

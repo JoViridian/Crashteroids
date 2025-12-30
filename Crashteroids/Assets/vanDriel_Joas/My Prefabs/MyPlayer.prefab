@@ -154,10 +154,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 2992537867741629695, guid: e16410d1fd3cf6b468ff265ff6707c4a, type: 3}
   bulletPrefabBig: {fileID: 1298331298915732755, guid: 54c71f7632f03134584a73bef88195da, type: 3}
-  simpleBullet: {fileID: 8300000, guid: 8fe7a0dd1598dc441a04002539c3995d, type: 3}
+  simpleBullet: {fileID: 8300000, guid: db4d9d5a7e2e68f4f89d7ec8e4ddfc32, type: 3}
   randomBulletSound:
-  - {fileID: 8300000, guid: e16aa4d2685d8744c9c6d17747b89329, type: 3}
-  - {fileID: 8300000, guid: 5e2e2c2d9c374714e8dea4bd065e6d6a, type: 3}
+  - {fileID: 8300000, guid: 1fd11b404b1a9c0458c68da719648abd, type: 3}
+  - {fileID: 8300000, guid: 959b5a3707e37d2418c1a9bcf79092e9, type: 3}
   cooldownEffect: {fileID: 4516069547747178362}
   deployDistance: {x: 0, y: 0, z: 0}
   bulletSpeed: 300
@@ -206,8 +206,9 @@ MonoBehaviour:
     m_Bits: 384
   effectHit: {fileID: 4619301477547320369, guid: 07f6dc9ccb4b3524680269777b976582, type: 3}
   effectDeath: {fileID: 1964481646083541497, guid: 11cee65c7c08ab74d8122b2fea1fa21e, type: 3}
-  deathSound: {fileID: 8300000, guid: 079ae773a5a70c741845fcd8c59b6076, type: 3}
-  hitSound: {fileID: 8300000, guid: 51ffbe2f0d8c62b4d854d0736312e72c, type: 3}
+  deathSound: {fileID: 8300000, guid: e43a13a0390704947a437db629c8da65, type: 3}
+  hitSound: {fileID: 8300000, guid: dbf65cfbf95ba07429c9edba94734982, type: 3}
+  damageSound: {fileID: 8300000, guid: 3bf31aaf8ca28e84b86d39b642d3ffa0, type: 3}
   onDestroy:
     m_PersistentCalls:
       m_Calls:
@@ -223,6 +224,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8636593045200870793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,12 +243,13 @@ MonoBehaviour:
   SpriteRenderer: {fileID: 6408773966255994622}
   smokeEffect: {fileID: 7283013268806064561, guid: b10ad6aff3ca05e43b9de47f6a2d6b9a, type: 3}
   coreTransform: {fileID: 2124357944695459930}
+  heartbeat: {fileID: 8300000, guid: 435b348231e29894abc12f1e41b79d41, type: 3}
   smokeTimerMax: 0.1
   color1: {r: 0.41568628, g: 0.9529412, b: 0.5529412, a: 1}
   color2: {r: 0.62352943, g: 0.9607843, b: 0.36862746, a: 1}
   color3: {r: 1, g: 0.94509804, b: 0.39215687, a: 1}
   color4: {r: 0.99215686, g: 0.60784316, b: 0.3137255, a: 1}
-  color5: {r: 0.972549, g: 0.4862745, b: 0.44313726, a: 1}
+  color5: {r: 0.972549, g: 0.45490196, b: 0.40784314, a: 1}
 --- !u!114 &5061687849970511563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,7 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e78a6953778bade428f1b868ee190a03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameStartClip: {fileID: 8300000, guid: 67d9d2d9262f0b14e9c17f8abf133ffc, type: 3}
+  gameStartClip: {fileID: 8300000, guid: 0d17ecfd59aa13a42a5037c8021c04f6, type: 3}
 --- !u!114 &6668824524745352297
 MonoBehaviour:
   m_ObjectHideFlags: 0

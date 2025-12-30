@@ -8,6 +8,7 @@ public class GameOverMenuAltered : MonoBehaviour
     public bool gamePlayed;
     public TextMeshProUGUI finalScoreTextBox;
     public HighscoreScript script;
+    public AudioClip click;
     // stands for Highlight Color Start and End
     private string hCs = "<color=#5ef965ff>";
     private string hCe = "</color =#5ef965ff>";
@@ -32,11 +33,13 @@ public class GameOverMenuAltered : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             SceneManager.LoadScene(levelName);
+            AudioManagerAltered.Instance.PlayClip(click, 0.75f);
         }
 
         if (Input.GetKeyDown(KeyCode.C))
         {
             SceneManager.LoadScene("Controls");
+            AudioManagerAltered.Instance.PlayClip(click, 0.75f);
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))

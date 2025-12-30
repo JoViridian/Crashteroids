@@ -246,8 +246,9 @@ MonoBehaviour:
     m_Bits: 320
   effectHit: {fileID: 3192162787682262101, guid: b88dbefdb7bf0e9419cd73c08768fa98, type: 3}
   effectDeath: {fileID: 3192162787682262101, guid: b88dbefdb7bf0e9419cd73c08768fa98, type: 3}
-  deathSound: {fileID: 8300000, guid: 98f3a331798a2f8429929603ccdcb770, type: 3}
-  hitSound: {fileID: 8300000, guid: 51ffbe2f0d8c62b4d854d0736312e72c, type: 3}
+  deathSound: {fileID: 8300000, guid: 6e68e2e3d5a18ae43aff04f9fcf62430, type: 3}
+  hitSound: {fileID: 8300000, guid: dbf65cfbf95ba07429c9edba94734982, type: 3}
+  damageSound: {fileID: 8300000, guid: dbf65cfbf95ba07429c9edba94734982, type: 3}
   onDestroy:
     m_PersistentCalls:
       m_Calls:
@@ -275,6 +276,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &4158039900856695253
 MonoBehaviour:
   m_ObjectHideFlags: 0

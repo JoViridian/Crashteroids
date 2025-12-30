@@ -16,6 +16,11 @@ public class HighscoreScript : ScriptableObject
     void Awake()
     {
         highscore = PlayerPrefs.GetInt("Highscore");
-        //keyForward = (KeyCode)PlayerPrefs.GetInt("KeyForward");
+        keyForward = (KeyCode)PlayerPrefs.GetInt("KeyForward");
+        keyTurnLeft = (KeyCode)PlayerPrefs.GetInt("KeyTurnLeft");
+        keyTurnRight = (KeyCode)PlayerPrefs.GetInt("KeyTurnRight");
+        keyShoot1 = (KeyCode)PlayerPrefs.GetInt("KeyShoot1");
+        keyShoot2 = (KeyCode)PlayerPrefs.GetInt("KeyShoot2");
+        keyPause = (KeyCode)PlayerPrefs.GetInt("KeyPause");
     }
 }

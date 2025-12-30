@@ -285,6 +285,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 877976704}
+        m_TargetAssemblyTypeName: MyControls, Assembly-CSharp
+        m_MethodName: PlayClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &393050066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -731,6 +743,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 877976704}
+        m_TargetAssemblyTypeName: MyControls, Assembly-CSharp
+        m_MethodName: PlayClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &720342136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -822,6 +846,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MyControls
   TextBox: {fileID: 1672453421}
   script: {fileID: 11400000, guid: 99db7fdd2f87a5e4d8c2ea8778462c24, type: 2}
+  click: {fileID: 8300000, guid: ae9ee7107c115eb4f95ec2730e88b6fa, type: 3}
 --- !u!1 &899205182
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,6 +932,18 @@ MonoBehaviour:
       - m_Target: {fileID: 877976704}
         m_TargetAssemblyTypeName: MyControls, Assembly-CSharp
         m_MethodName: ChangeControlsShoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 877976704}
+        m_TargetAssemblyTypeName: MyControls, Assembly-CSharp
+        m_MethodName: PlayClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
