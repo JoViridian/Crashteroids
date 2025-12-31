@@ -14,8 +14,8 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: Best Company Ever
   productName: Crashteroids
-  defaultCursor: {fileID: 0}
-  cursorHotspot: {x: 0, y: 0}
+  defaultCursor: {fileID: 2800000, guid: 9711eac9f43324c4798dd968526acedf, type: 3}
+  cursorHotspot: {x: 0.1, y: 0.1}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
@@ -296,7 +296,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 997fe149a8908934e9def46ce8870ae4, type: 3}
+      m_Icon: {fileID: 2800000, guid: fc3d1db17a103e14c80120e04b5bd9cb, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
