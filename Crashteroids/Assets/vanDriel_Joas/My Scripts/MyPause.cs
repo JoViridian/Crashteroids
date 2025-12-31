@@ -7,7 +7,7 @@ public class MyPause : MonoBehaviour
     public GameObject pauseMenu;
     public TextMeshProUGUI pauseText;
     public AudioClip click;
-    private bool paused;
+    [HideInInspector] public bool paused;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {

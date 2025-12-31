@@ -720,6 +720,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2793170672801400219, guid: a2d650c4a99f3934e87d3edb98744f24, type: 3}
+      propertyPath: pause
+      value: 
+      objectReference: {fileID: 1435242917}
     - target: {fileID: 93670315250929924, guid: a2d650c4a99f3934e87d3edb98744f24, type: 3}
       propertyPath: maxSpeed
       value: 5
@@ -1564,6 +1568,7 @@ MonoBehaviour:
   pauseMenu: {fileID: 662428265}
   pauseText: {fileID: 46230146}
   click: {fileID: 8300000, guid: ae9ee7107c115eb4f95ec2730e88b6fa, type: 3}
+  paused: 0
 --- !u!114 &1435242918
 MonoBehaviour:
   m_ObjectHideFlags: 0

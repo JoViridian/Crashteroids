@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class MyGun : MonoBehaviour
 {
+    public MyPause pause;
     public MyRushPowerUp rush;
     public GameObject bulletPrefab;
     public GameObject bulletPrefabBig;
@@ -33,7 +34,7 @@ public class MyGun : MonoBehaviour
     void Update()
     {
         // places bullet in front of player nose only when both conditions met
-        if (Input.GetKey(GameManagerAltered.Instance.script.keyShoot1) && cooldown1 <= 0 && !rush.rushState) 
+        if (Input.GetKey(GameManagerAltered.Instance.script.keyShoot1) && cooldown1 <= 0 && !rush.rushState && !pause.paused) 
         {
             deployDistance = transform.TransformPoint(0, 0, dropOffset);
             DoShoot(-bulletOffset);
@@ -46,7 +47,7 @@ public class MyGun : MonoBehaviour
             cooldown1 -= Time.deltaTime;
         }
 
-        if (Input.GetKey(GameManagerAltered.Instance.script.keyShoot2) && cooldown2 <= 0 && !rush.rushState)
+        if (Input.GetKey(GameManagerAltered.Instance.script.keyShoot2) && cooldown2 <= 0 && !rush.rushState && !pause.paused)
         {
             deployDistance = transform.TransformPoint(0, 0, dropOffset);
             DoShootBig();
@@ -66,6 +67,7 @@ public class MyGun : MonoBehaviour
         // creates a bullet and then gives that bullet velocity and rotation based on the player's rotation and a given offset
         GameObject bulletInstance = Instantiate(bulletPrefab, deployDistance, transform.rotation);
         bulletInstance.gameObject.transform.Rotate(0, bulletRotationMult * rotation, 0);
+        bulletInstance.GetComponent<Rigidbody>().linearVelocity = 0.5f * gameObject.GetComponent<Rigidbody>().linearVelocity;
         bulletInstance.GetComponent<Rigidbody>().AddRelativeForce(rotation, 0, bulletSpeed);
         AudioManagerAltered.Instance.PlayRandomClip(randomBulletSound, 0.5f);
     }
@@ -74,7 +76,8 @@ public class MyGun : MonoBehaviour
     {
         // creates a bulltet and then gives that bullet velocity  and rotation based on the player's rotation
         GameObject bulletInstance = Instantiate(bulletPrefabBig, deployDistance, transform.rotation);
-        bulletInstance.GetComponent<Rigidbody>().AddRelativeForce(0, 0, bulletSpeedMult * bulletSpeed);
+        bulletInstance.GetComponent<Rigidbody>().linearVelocity = 0.5f * gameObject.GetComponent<Rigidbody>().linearVelocity;
+        bulletInstance.GetComponent<Rigidbody>().AddRelativeForce(0, 0, (bulletSpeedMult * bulletSpeed));
         AudioManagerAltered.Instance.PlayClip(simpleBullet, 1.5f);
 
         // gives the player recoil

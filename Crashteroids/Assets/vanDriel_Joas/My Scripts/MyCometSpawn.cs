@@ -28,7 +28,7 @@ public class MyCometSpawn : MonoBehaviour
         {
             if (spawnTimer <= 0)
             {
-                scriptbase.Spawn(cometPrefab);
+                Instantiate(cometPrefab, scriptbase.GetRandomPositionOffScreen(), Quaternion.identity, transform);
                 spawnAllow = false;
                 spawnTimer = Random.Range(spawnDelayLow, spawnDelayHigh);
             }
