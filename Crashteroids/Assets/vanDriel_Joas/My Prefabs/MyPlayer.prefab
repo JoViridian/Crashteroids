@@ -325,6 +325,7 @@ MonoBehaviour:
   rushDuration: 5
   rocket: {fileID: 5864120440882639698}
   forwardPower: 20
+  snowEffect: {fileID: 8886232008356226258, guid: b6e96f044fb06b2458646b6c42c73a64, type: 3}
   shipLeftObject: {fileID: 5758513546310571210}
   shipRightObject: {fileID: 7382060609632690288}
   shipTopObject: {fileID: 6717164452800222504}

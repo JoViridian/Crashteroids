@@ -22,6 +22,7 @@ public class GameManagerAltered : MonoBehaviour
     public int score;
     public static int finalScore;
     public static int scoreGain;
+    public float scoreMultiplier;
     public float scoreTimer;
     public float scoreTimerReset;
     public static float gameOverDelay;
@@ -51,6 +52,7 @@ public class GameManagerAltered : MonoBehaviour
         highscoreGet = false;
 
         score = 0;
+        scoreMultiplier = 1;
         scoreTimer = 0;
         gameOverDelay = 1;
         asteroidSpeed = 1.2f;

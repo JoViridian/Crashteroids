@@ -6,6 +6,7 @@ public class MyPowerUp : MonoBehaviour
     public GameObject effectHit;
     public bool powerUpState;
     public int value = 10;
+    public float multBoost;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -20,6 +21,7 @@ public class MyPowerUp : MonoBehaviour
             }
 
             GameManagerAltered.Instance.score += value;
+            GameManagerAltered.Instance.scoreMultiplier += multBoost;
             GameManagerAltered.Instance.cometOpportunity = Random.Range(0f, 100f);
             GameManagerAltered.Instance.scoreTimer = GameManagerAltered.Instance.scoreTimerReset;
             AudioManagerAltered.Instance.PlayClip(pickupSound, 0.5f);

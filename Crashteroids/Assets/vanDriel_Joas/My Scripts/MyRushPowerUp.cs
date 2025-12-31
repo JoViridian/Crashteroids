@@ -8,6 +8,7 @@ public class MyRushPowerUp : MonoBehaviour
     private float rushTimer;
     public Rigidbody rocket;
     public int forwardPower = 360;
+    public GameObject snowEffect;
 
     public SpriteRenderer shipLeftObject;
     public SpriteRenderer shipRightObject;
@@ -52,6 +53,7 @@ public class MyRushPowerUp : MonoBehaviour
             speedLimit.maxSpeed = speedLimitBoosted;
             rocket.mass = 100;
             RushTimer();
+            Instantiate(snowEffect, transform.position, transform.rotation);
             rocket.AddRelativeForce(0, 0, forwardPower * Time.deltaTime, ForceMode.VelocityChange);
         }
         else
