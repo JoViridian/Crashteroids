@@ -28,7 +28,7 @@ public class MyPause : MonoBehaviour
             pauseMenu.SetActive(true);
             Time.timeScale = 0f;
 
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Return))
             {
                 GameManagerAltered.Instance.DoHighscoreCheck();
                 SceneManager.LoadScene("MainMenu");
@@ -41,7 +41,7 @@ public class MyPause : MonoBehaviour
             pauseMenu.SetActive(false);
         }
 
-        pauseText.text = "\n \n PRESS " + GameManagerAltered.Instance.script.pauseName + " TO RESUME \n \n PRESS <color=#b9cdcdff>escape</color=b9cdcdff> TO QUIT";
+        pauseText.text = "\n \n PRESS " + GameManagerAltered.Instance.script.pauseName + " TO RESUME \n \n PRESS <color=#b9cdcdff>enter</color=b9cdcdff> TO QUIT";
     }
 
     private void DoPause()
