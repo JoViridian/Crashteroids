@@ -1111,6 +1111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 579733327}
+  rush: {fileID: 1473095057}
   cam: {fileID: 390176391}
   followCamMult: 1
 --- !u!54 &952642671
@@ -1351,7 +1352,7 @@ MonoBehaviour:
   cometPrefab: {fileID: 3174980502036062572, guid: 7ddce681055b7a44f927f2051b3a4477, type: 3}
   spawnDelayLow: 10
   spawnDelayHigh: 30
-  spawnChance: 50
+  spawnChance: 95
 --- !u!1 &1397225656
 GameObject:
   m_ObjectHideFlags: 0
@@ -1578,6 +1579,8 @@ MonoBehaviour:
   hpTextBox: {fileID: 1181885874}
   damageCol: {r: 0.98039216, g: 0.4, b: 0.37254903, a: 1}
   healCol: {r: 0.36862746, g: 0.9764706, b: 0.39607844, a: 1}
+  protectedCol: {r: 0.41568628, g: 0.9529412, b: 0.7529412, a: 1}
+  rush: {fileID: 1473095057}
 --- !u!54 &1473095028 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 5864120440882639698, guid: a2d650c4a99f3934e87d3edb98744f24, type: 3}
@@ -1599,63 +1602,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7e12f1489acce140beea07d6a99de18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1514866184
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3174980502036062572, guid: 7ddce681055b7a44f927f2051b3a4477, type: 3}
-      propertyPath: m_Name
-      value: MyComet
-      objectReference: {fileID: 0}
-    - target: {fileID: 5980059350419798716, guid: 7ddce681055b7a44f927f2051b3a4477, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.11311
-      objectReference: {fileID: 0}
-    - target: {fileID: 5980059350419798716, guid: 7ddce681055b7a44f927f2051b3a4477, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5980059350419798716, guid: 7ddce681055b7a44f927f2051b3a4477, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.59089
-      objectReference: {fileID: 0}
-    - target: {fileID: 5980059350419798716, guid: 7ddce681055b7a44f927f2051b3a4477, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5980059350419798716, guid: 7ddce681055b7a44f927f2051b3a4477, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5980059350419798716, guid: 7ddce681055b7a44f927f2051b3a4477, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5980059350419798716, guid: 7ddce681055b7a44f927f2051b3a4477, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5980059350419798716, guid: 7ddce681055b7a44f927f2051b3a4477, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5980059350419798716, guid: 7ddce681055b7a44f927f2051b3a4477, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5980059350419798716, guid: 7ddce681055b7a44f927f2051b3a4477, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7ddce681055b7a44f927f2051b3a4477, type: 3}
+--- !u!114 &1473095057 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 275845859317151469, guid: a2d650c4a99f3934e87d3edb98744f24, type: 3}
+  m_PrefabInstance: {fileID: 522757016}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579733327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27349fef8957c114b80f43adad77c9ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MyRushPowerUp
 --- !u!1 &1919324254
 GameObject:
   m_ObjectHideFlags: 0
@@ -1804,4 +1761,3 @@ SceneRoots:
   - {fileID: 542253344}
   - {fileID: 164569335}
   - {fileID: 592172120}
-  - {fileID: 1514866184}

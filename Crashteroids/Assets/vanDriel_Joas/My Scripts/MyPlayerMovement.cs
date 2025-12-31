@@ -1,9 +1,11 @@
+using System.Net.Sockets;
 using UnityEngine;
 
 public class MyPlayerMovement : MonoBehaviour
 {
     public Rigidbody rocket;
     public Animator animator;
+    public MyRushPowerUp rush;
     public int spinPower = 180;
     public int forwardPower = 360;
 
@@ -19,7 +21,7 @@ public class MyPlayerMovement : MonoBehaviour
             transform.Rotate(0, -spinPower * Time.deltaTime, 0);
         }
 
-        if (Input.GetKey(GameManagerAltered.Instance.script.keyForward))
+        if (Input.GetKey(GameManagerAltered.Instance.script.keyForward) && !rush.rushState)
         {
             rocket.AddRelativeForce(0, 0, forwardPower * Time.deltaTime);
             //animator.SetBool("Thrusting", true);
@@ -28,5 +30,7 @@ public class MyPlayerMovement : MonoBehaviour
         {
             //animator.SetBool("Thrusting", false);
         }
+
+        Debug.Log(rocket.linearVelocity.magnitude);
     }
 }

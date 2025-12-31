@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class MyGun : MonoBehaviour
 {
+    public MyRushPowerUp rush;
     public GameObject bulletPrefab;
     public GameObject bulletPrefabBig;
     public AudioClip simpleBullet;
@@ -32,7 +33,7 @@ public class MyGun : MonoBehaviour
     void Update()
     {
         // places bullet in front of player nose only when both conditions met
-        if (Input.GetKey(GameManagerAltered.Instance.script.keyShoot1) && cooldown1 <= 0) 
+        if (Input.GetKey(GameManagerAltered.Instance.script.keyShoot1) && cooldown1 <= 0 && !rush.rushState) 
         {
             deployDistance = transform.TransformPoint(0, 0, dropOffset);
             DoShoot(-bulletOffset);
@@ -45,7 +46,7 @@ public class MyGun : MonoBehaviour
             cooldown1 -= Time.deltaTime;
         }
 
-        if (Input.GetKey(GameManagerAltered.Instance.script.keyShoot2) && cooldown2 <= 0)
+        if (Input.GetKey(GameManagerAltered.Instance.script.keyShoot2) && cooldown2 <= 0 && !rush.rushState)
         {
             deployDistance = transform.TransformPoint(0, 0, dropOffset);
             DoShootBig();

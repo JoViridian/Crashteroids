@@ -76,6 +76,14 @@ PrefabInstance:
       propertyPath: effectHit
       value: 
       objectReference: {fileID: 7057294998633543783, guid: cc11d7eb472efc9418fb10911f036864, type: 3}
+    - target: {fileID: 6214260473279568984, guid: d4620dda622dfce4f9fbc9b4ae6d98f8, type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3ba49db2fbaaa5d4c896177e0022136f, type: 3}
+    - target: {fileID: 6214260473279568984, guid: d4620dda622dfce4f9fbc9b4ae6d98f8, type: 3}
+      propertyPath: powerUpState
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

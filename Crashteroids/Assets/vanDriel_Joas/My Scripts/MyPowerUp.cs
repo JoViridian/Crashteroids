@@ -4,6 +4,7 @@ public class MyPowerUp : MonoBehaviour
 {
     public AudioClip pickupSound;
     public GameObject effectHit;
+    public bool powerUpState;
     public int value = 10;
 
     private void OnCollisionEnter(Collision collision)
@@ -12,6 +13,11 @@ public class MyPowerUp : MonoBehaviour
         {
             collision.gameObject.GetComponent<MyHP>().hp += value;
             collision.gameObject.GetComponent<MyHP>().hp = Mathf.Clamp(collision.gameObject.GetComponent<MyHP>().hp, 0, collision.gameObject.GetComponent<MyHP>().hpMax);
+
+            if (powerUpState)
+            {
+                collision.gameObject.GetComponent<MyRushPowerUp>().rushState = true;
+            }
 
             GameManagerAltered.Instance.score += value;
             GameManagerAltered.Instance.cometOpportunity = Random.Range(0f, 100f);

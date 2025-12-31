@@ -3,11 +3,12 @@ using UnityEngine;
 public class MyCameraMove : MonoBehaviour
 {
     public GameObject player;
+    public MyRushPowerUp rush;
     private Rigidbody rb;
     private Rigidbody rbPlayer;
     public Camera cam;
     public float followCamMult = 1;
-    private float vectorFix = 5.2f;
+    private float vectorFix;
 
     private Vector3 playerPos;
     private Vector3 camFix;
@@ -20,7 +21,16 @@ public class MyCameraMove : MonoBehaviour
     }
    
     void Update()
-    { 
+    {
+        if (rush.rushState)
+        {
+            vectorFix = 8.7f;
+        }
+        else
+        {
+            vectorFix = 5.2f;
+        }
+
         if (rbPlayer != null)
         {
             screenSize = (Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height)) - Camera.main.ScreenToWorldPoint(new Vector3(0, 0))) * 0.5f;

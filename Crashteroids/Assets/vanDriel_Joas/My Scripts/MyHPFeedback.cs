@@ -8,14 +8,24 @@ public class MyHPFeedback : MonoBehaviour
     public TextMeshProUGUI hpTextBox;
     public Color damageCol;
     public Color healCol;
+    public Color protectedCol;
+    public MyRushPowerUp rush;
 
     void Start()
     {
         hpHere = hp.hp;
     }
+
     void Update()
     {
-        hpTextBox.color = (hpTextBox.color + Color.white * Time.deltaTime) / (1 + Time.deltaTime);
+        if (rush.rushState)
+        {
+            hpTextBox.color = (hpTextBox.color + protectedCol * Time.deltaTime) / (1 + Time.deltaTime);
+        }
+        else
+        {
+            hpTextBox.color = (hpTextBox.color + Color.white * Time.deltaTime) / (1 + Time.deltaTime);
+        }
 
         if (hpHere < hp.hp)
         {

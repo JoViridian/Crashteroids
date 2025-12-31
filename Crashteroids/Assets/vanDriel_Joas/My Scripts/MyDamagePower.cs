@@ -9,6 +9,7 @@ public class MyDamagePower : MonoBehaviour
     private Vector3 velDiffThat;
     private float velDiff;
     public float defenseTotal = 1;
+    public int hitAble = 1;
 
     public int DoDamage(GameObject collision)
     {
@@ -17,9 +18,9 @@ public class MyDamagePower : MonoBehaviour
             // in a collision, gets the velocity difference between both GO and gives an appropriate damage value
             velDiffThis = gameObject.GetComponent<Rigidbody>().linearVelocity;
             velDiffThat = collision.GetComponent<Rigidbody>().linearVelocity;
-            // ! consider rewriting with magnitude and streamlining the defenseTotal logic ?
-            velDiff = Mathf.Abs(velDiffThis.x - velDiffThat.x) + Mathf.Abs(velDiffThis.z - velDiffThat.z);
-            damageTotal = Mathf.RoundToInt(damagePower * velDiff * collision.GetComponent<MyDamagePower>().defenseTotal) + 1; // the 1 is added to prevent a 0 damage result
+            velDiff = Mathf.Abs((velDiffThis - velDiffThat).magnitude);
+            MyDamagePower collisionscript = collision.GetComponent<MyDamagePower>();
+            damageTotal = collisionscript.hitAble * (Mathf.RoundToInt(damagePower * velDiff * collisionscript.defenseTotal) + 1); // the 1 is added to prevent a 0 damage result
         }
         else
         {

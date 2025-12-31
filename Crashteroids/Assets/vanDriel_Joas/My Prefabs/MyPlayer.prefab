@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 1018265261263250365}
   - component: {fileID: 4011868647533632111}
   - component: {fileID: 6668824524745352297}
+  - component: {fileID: 275845859317151469}
   m_Layer: 6
   m_Name: MyPlayer
   m_TagString: Player
@@ -138,6 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rocket: {fileID: 5864120440882639698}
   animator: {fileID: 655086262283799631}
+  rush: {fileID: 275845859317151469}
   spinPower: 270
   forwardPower: 360
 --- !u!114 &-2793170672801400219
@@ -152,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b6dedd6e4a5bb24daf6b73feb8c71c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rush: {fileID: 275845859317151469}
   bulletPrefab: {fileID: 2992537867741629695, guid: e16410d1fd3cf6b468ff265ff6707c4a, type: 3}
   bulletPrefabBig: {fileID: 1298331298915732755, guid: 54c71f7632f03134584a73bef88195da, type: 3}
   simpleBullet: {fileID: 8300000, guid: db4d9d5a7e2e68f4f89d7ec8e4ddfc32, type: 3}
@@ -177,6 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25cf0a31ef8e5934699bb4ad9daa1870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MyThruster
+  rush: {fileID: 275845859317151469}
   bulletPrefab: {fileID: 8958506868901912361, guid: 140b422606d59bc4fb19ec4ce8692631, type: 3}
   randomThrusterSound:
   - {fileID: 8300000, guid: cad2698369a96b046bdf811984361575, type: 3}
@@ -265,6 +269,7 @@ MonoBehaviour:
   complexDamage: 1
   damagePower: 2
   defenseTotal: 1
+  hitAble: 1
 --- !u!114 &1018265261263250365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,6 +309,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9392be6aa27699d468d35a8ccf1990d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MyStabilizer
+--- !u!114 &275845859317151469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942460987253603177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27349fef8957c114b80f43adad77c9ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MyRushPowerUp
+  rushState: 0
+  rushDuration: 5
+  rocket: {fileID: 5864120440882639698}
+  forwardPower: 20
+  shipLeftObject: {fileID: 5758513546310571210}
+  shipRightObject: {fileID: 7382060609632690288}
+  shipTopObject: {fileID: 6717164452800222504}
+  damagePower: {fileID: 5061687849970511563}
+  speedLimit: {fileID: 93670315250929924}
+  shipLeftBoosted: {fileID: 21300000, guid: 2f03b0508df64eb4aaf56350b9be34fb, type: 3}
+  shipRightBoosted: {fileID: 21300000, guid: 1cbc8f85f6b415f45b003be12b87e71c, type: 3}
+  shipTopBoosted: {fileID: 21300000, guid: 2ce3456b9b51c434db8bea49194a0632, type: 3}
+  damagePowerBoosted: 30
+  speedLimitBoosted: 8
 --- !u!1 &2124357944695459930
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class MyThruster : MonoBehaviour
 {
+    public MyRushPowerUp rush;
     public GameObject bulletPrefab;
     public AudioClip[] randomThrusterSound = new AudioClip[3];
     public Vector3 deployDistance;
@@ -21,7 +22,7 @@ public class MyThruster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(GameManagerAltered.Instance.script.keyForward))
+        if (Input.GetKey(GameManagerAltered.Instance.script.keyForward) || rush.rushState)
         {
             deployDistance = transform.TransformPoint(0, 0, dropOffset);
             DoProjectile(bulletOffset);
