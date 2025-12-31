@@ -4960,7 +4960,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 7133d3f2455b5ad40b2ff756e436db6b, type: 3}
     - target: {fileID: 4692794661204628976, guid: 7c95adc075426254990bdf255eca3f6c, type: 3}
       propertyPath: speedBuffer
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4692794661204628976, guid: 7c95adc075426254990bdf255eca3f6c, type: 3}
       propertyPath: spawnRandomRot

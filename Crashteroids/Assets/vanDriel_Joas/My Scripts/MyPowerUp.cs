@@ -23,6 +23,7 @@ public class MyPowerUp : MonoBehaviour
             GameManagerAltered.Instance.score += value;
             GameManagerAltered.Instance.scoreMultiplier += multBoost;
             GameManagerAltered.Instance.cometOpportunity = Random.Range(0f, 100f);
+            Debug.Log(GameManagerAltered.Instance.cometOpportunity);
             GameManagerAltered.Instance.scoreTimer = GameManagerAltered.Instance.scoreTimerReset;
             AudioManagerAltered.Instance.PlayClip(pickupSound, 0.5f);
             Instantiate(effectHit, transform.position, transform.rotation);

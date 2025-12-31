@@ -30,7 +30,5 @@ public class MyPlayerMovement : MonoBehaviour
         {
             //animator.SetBool("Thrusting", false);
         }
-
-        Debug.Log(rocket.linearVelocity.magnitude);
     }
 }

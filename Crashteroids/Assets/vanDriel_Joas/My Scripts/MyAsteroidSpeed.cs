@@ -22,5 +22,9 @@ public class MyAsteroidSpeed : MonoBehaviour
         {
             rb.linearVelocity *= (1 + Time.deltaTime);
         }
+        else if (rb.linearVelocity.magnitude > GameManagerAltered.Instance.asteroidSpeed * speedBuffer * 1.5f)
+        {
+            rb.linearVelocity *= (1 - Time.deltaTime);
+        }
     }
 }

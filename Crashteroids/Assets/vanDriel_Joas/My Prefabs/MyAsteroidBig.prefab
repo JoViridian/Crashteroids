@@ -88,6 +88,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3845844392040511650, guid: 3148a2083944696448386a0dd2f3a2f1, type: 3}
+      propertyPath: maxForceMagnitude
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3845844392040511650, guid: 3148a2083944696448386a0dd2f3a2f1, type: 3}
+      propertyPath: minForceMagnitude
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4045754121921911406, guid: 3148a2083944696448386a0dd2f3a2f1, type: 3}
       propertyPath: hp
       value: 20

@@ -10,18 +10,21 @@ public class MyRushPowerUp : MonoBehaviour
     public int forwardPower = 360;
     public GameObject snowEffect;
 
+    public SphereCollider drillPart;
     public SpriteRenderer shipLeftObject;
     public SpriteRenderer shipRightObject;
     public SpriteRenderer shipTopObject;
     public MyDamagePower damagePower;
     public LimitRigidbodyVelocity speedLimit;
 
+    public PhysicsMaterial bounceBoosted;
     public Sprite shipLeftBoosted;
     public Sprite shipRightBoosted;
     public Sprite shipTopBoosted;
     public int damagePowerBoosted;
     public float speedLimitBoosted;
 
+    private PhysicsMaterial bounceBase;
     private Sprite shipLeftBase;
     private Sprite shipRightBase;
     private Sprite shipTopBase;
@@ -32,6 +35,7 @@ public class MyRushPowerUp : MonoBehaviour
     {
         rushState = false;
         rushTimer = rushDuration;
+        bounceBase = drillPart.material;
         shipLeftBase = shipLeftObject.sprite;
         shipRightBase = shipRightObject.sprite;
         shipTopBase = shipTopObject.sprite;
@@ -44,6 +48,7 @@ public class MyRushPowerUp : MonoBehaviour
     {
         if (rushState)
         {
+            drillPart.material = bounceBoosted;
             shipLeftObject.sprite = shipLeftBoosted;
             shipRightObject.sprite = shipRightBoosted;
             shipTopObject.sprite = shipTopBoosted;
@@ -58,6 +63,7 @@ public class MyRushPowerUp : MonoBehaviour
         }
         else
         {
+            drillPart.material = bounceBase;
             shipLeftObject.sprite = shipLeftBase;
             shipRightObject.sprite = shipRightBase;
             shipTopObject.sprite = shipTopBase;

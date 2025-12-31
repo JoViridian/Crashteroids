@@ -322,15 +322,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MyRushPowerUp
   rushState: 0
-  rushDuration: 5
+  rushDuration: 7
   rocket: {fileID: 5864120440882639698}
   forwardPower: 20
   snowEffect: {fileID: 8886232008356226258, guid: b6e96f044fb06b2458646b6c42c73a64, type: 3}
+  drillPart: {fileID: 7802909454829854733}
+  sidepart: {fileID: 6998222271887524906}
   shipLeftObject: {fileID: 5758513546310571210}
   shipRightObject: {fileID: 7382060609632690288}
   shipTopObject: {fileID: 6717164452800222504}
   damagePower: {fileID: 5061687849970511563}
   speedLimit: {fileID: 93670315250929924}
+  bounceBoosted: {fileID: 13400000, guid: 51310ed8564f7a34b94def8f78bb7e18, type: 2}
   shipLeftBoosted: {fileID: 21300000, guid: 2f03b0508df64eb4aaf56350b9be34fb, type: 3}
   shipRightBoosted: {fileID: 21300000, guid: 1cbc8f85f6b415f45b003be12b87e71c, type: 3}
   shipTopBoosted: {fileID: 21300000, guid: 2ce3456b9b51c434db8bea49194a0632, type: 3}

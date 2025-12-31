@@ -14,7 +14,18 @@ public class HighscoreScript : ScriptableObject
 
     // allows highscore to be recalled in a future play session
     void Awake()
-    {
+    { 
+        if (!PlayerPrefs.HasKey("KeyForward"))
+        {
+            PlayerPrefs.SetInt("Highscore", 0);
+            PlayerPrefs.SetInt("KeyForward", (int)KeyCode.W);
+            PlayerPrefs.SetInt("KeyTurnLeft", (int)KeyCode.Q);
+            PlayerPrefs.SetInt("KeyTurnRight", (int)KeyCode.E);
+            PlayerPrefs.SetInt("KeyShoot1", (int)KeyCode.Mouse0);
+            PlayerPrefs.SetInt("KeyShoot2", (int)KeyCode.Mouse1);
+            PlayerPrefs.SetInt("KeyPause", (int)KeyCode.P);
+        }
+
         highscore = PlayerPrefs.GetInt("Highscore");
         keyForward = (KeyCode)PlayerPrefs.GetInt("KeyForward");
         keyTurnLeft = (KeyCode)PlayerPrefs.GetInt("KeyTurnLeft");

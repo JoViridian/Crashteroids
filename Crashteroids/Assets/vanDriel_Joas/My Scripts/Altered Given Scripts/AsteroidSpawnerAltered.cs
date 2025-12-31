@@ -14,7 +14,6 @@ public class AsteroidSpawnerAltered : MonoBehaviour
     private float maxIncreaseTimer;
     public float maxIncreaseTimerReset = 30;
     public float maxAsteroidListSize = 5;
-    private float timerPlus = 2;
 
     void Start()
     {
@@ -35,8 +34,8 @@ public class AsteroidSpawnerAltered : MonoBehaviour
         // ! only sets the spawn timer higher  after a while to have a quicker early game
         if (maxIncreaseTimer < 0 && maxAsteroidTotal < maxAsteroidListSize)
         {
+            maxIncreaseTimer = maxIncreaseTimerReset * maxAsteroidTotal;
             maxAsteroidTotal++;
-            maxIncreaseTimer = maxIncreaseTimerReset * timerPlus;
             minSpawnTime = minSpawnTimeUpdate;
             maxSpawnTime = maxSpawnTimeUpdate;
         }
